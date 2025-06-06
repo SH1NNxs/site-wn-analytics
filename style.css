@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --cor-fundo: #04112E;
+  --cor-hover: #03e9f4;
+  --cor-fonte: #fff;
+  --cor-caixa-login: rgba(0, 0, 0, 0.5);
+  --cor-navbar: #00132c;
+  --cor-fontesecundaria: #5f4918;
+  --cor-bordas: #00060e;
+  --cor-dias-calendar: #007BFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-fonte);
+}
+
+/* Header */
+header {
+  background-color: var(--cor-fundo);
+  padding: 50px;
+  text-align: center;
+}
+
+.caixa-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.caixa-menu ul li {
+  margin: 0 10px;
+}
+
+.caixa-menu ul li a {
+  text-decoration: none;
+  color: var(--cor-fonte);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--cor-caixa-login);
+  transition: background 0.3s, color 0.3s;
+}
+
+.caixa-menu ul li a:hover {
+  background-color: var(--cor-hover);
+  color: var(--cor-navbar);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to bottom right, #04112E, #00132c);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Section base */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: var(--cor-caixa-login);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  color: var(--cor-fonte);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  color: var(--cor-hover);
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: 0.5s;
+  background-color: transparent;
+  border: 2px solid var(--cor-hover);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--cor-hover);
+  color: var(--cor-fundo);
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--cor-navbar);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: var(--cor-fonte);
+}
