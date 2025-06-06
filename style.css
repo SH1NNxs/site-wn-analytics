@@ -158,6 +158,75 @@ section.hero p {
   font-size: 1.25rem;
   margin-bottom: 30px;
 }
+.grid-largada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  /* Removemos o max-width para que as imagens se ajustem à largura da página */
+}
+
+.piloto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Aumentamos a largura para 40% da largura da linha */
+  /* Isso fará com que cada "piloto" ocupe 40% da largura disponível na sua linha */
+  width: 40%;
+  /* Se você tiver mais de duas imagens por linha e quiser que elas ocupem 40% cada,
+     o layout pode quebrar. Considere ajustar o `gap` ou o `justify-content` da `.linha`.
+     Para 2 imagens por linha, 40% é um bom ponto de partida. */
+}
+
+.piloto img {
+  width: 100%; /* A imagem preenche 100% da largura do seu contêiner (.piloto) */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(3, 233, 244, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.piloto img:hover {
+  transform: scale(1.05);
+}
+
+.legenda {
+  margin-top: 10px;
+  font-weight: 500;
+  text-align: justify; /* Este é o comando para justificar o texto */
+  color: var(--cor-fonte, #ffffff);
+}
+
+.offset {
+  margin-top: 40px; /* Efeito de recuo */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .linha {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .piloto {
+    /* Em telas pequenas, é melhor que ocupe uma largura maior,
+       ou até 90-100% para não ficar muito pequeno */
+    width: 90%; /* Por exemplo, 90% da largura da tela em dispositivos móveis */
+  }
+
+  .offset {
+    margin-top: 20px;
+  }
+}
+
+
 
 .btn {
   background-color: var(--cor-hover);
