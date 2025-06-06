@@ -2,10 +2,9 @@
 
 :root {
   --cor-fundo: #272729;
-  --cor-hover: #03e9f4;
+  --cor-hover: #F58634;
   --cor-fonte: #ffffff;
   --cor-fonte-login-pg1: #fffefe;
-  --cor-fonte-teste: #f00a0a;
   --cor-caixa-login: rgba(0, 0, 0, 0.65);
   --cor-card-depoimentos:#06205e;
   --cor-navbar: #00132c;
@@ -226,6 +225,7 @@ section.hero p {
 
 /* Depoimentos */
 .section.light {
+  margin-top: 20px;
   background-color: var(--cor-caixa-login);
   border-radius: 12px;
   max-width: 90%;
