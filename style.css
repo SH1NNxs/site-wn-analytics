@@ -6,7 +6,7 @@
   --cor-fonte: #ffffff;
   --cor-fonte-login-pg1: #fffefe;
   --cor-caixa-login: rgba(0, 0, 0, 0.65);
-  --cor-card-depoimentos:#06205e;
+  --cor-card-depoimentos:#031336;
   --cor-navbar: #00132c;
   --cor-fontesecundaria: #5f4918;
   --cor-bordas: #00060e;
@@ -30,7 +30,7 @@ body {
 }
 
 body {
-  background: var(--cor-fundo) url('fundo site.jpg') no-repeat center center fixed;
+  background: var(--cor-fundo) url('Fundo site1.png') no-repeat center center fixed;
   background-size: cover;
   /*opacity: ;*/
   line-height: 1.6;
@@ -145,6 +145,7 @@ header .container {
 
 /* Hero Section */
 section.hero {
+  margin-top: -60px;
   text-align: center;
   padding: 80px 20px;
 }
@@ -266,6 +267,7 @@ section.hero p {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  
 }
 
 .card {
