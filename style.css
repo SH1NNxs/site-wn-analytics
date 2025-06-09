@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+/* ========================== */
+/* Variáveis e Reset Básico  */
+/* ========================== */
 :root {
   --cor-fundo: #272729;
   --cor-hover: #F58634;
   --cor-fonte: #ffffff;
   --cor-fonte-login-pg1: #fffefe;
   --cor-caixa-login: rgba(0, 0, 0, 0.65);
-  --cor-card-depoimentos:#031336;
+  --cor-card-depoimentos: #031336;
   --cor-navbar: #00132c;
   --cor-fontesecundaria: #5f4918;
   --cor-bordas: #00060e;
@@ -23,28 +26,26 @@
   color: var(--cor-fonte);
 }
 
+/* ========================== */
+/* Corpo                      */
+/* ========================== */
 body {
   background: var(--cor-fundo) url('imagens/Fundo site1.png') no-repeat center center fixed;
   background-size: cover;
   line-height: 1.6;
-  padding-top: 80px; /* espaço para o menu fixo */
+  padding-top: 80px;
 }
 
-
-body {
-  background: var(--cor-fundo) url('imagens/Fundo site1.png') no-repeat center center fixed;
-  background-size: cover;
-  /*opacity: ;*/
-  line-height: 1.6;
-  padding-top: 80px; /* espaço para o menu fixo */
-}
-
-
-/* Header fixo */
+/* ========================== */
+/* Header fixo animado        */
+/* ========================== */
 header {
   background-color: var(--cor-fundo);
+  background-image: linear-gradient(to bottom, var(--cor-fundo), var(--cor-navbar));
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  animation: header 5s infinite;
   padding: 8px 20px;
-  border-radius: 12px;
   position: fixed;
   top: 0;
   left: 50%;
@@ -56,29 +57,18 @@ header {
   align-items: center;
   justify-content: space-between;
   opacity: 95%;
-  
-
-
-  background-image: linear-gradient(to bottom, var(--cor-fundo), var(--cor-navbar));
-  background-size: 100% 200%;
-  background-position: 0% 100%;
-  animation: header 5s infinite;
-  
+  border-radius: 12px;
 }
 
 @keyframes header {
-  0% {
-    background-position: 0% 100%;
-  }
-  50% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 100%;}
-  
+  0% { background-position: 0% 100%; }
+  50% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
 }
 
-/* Container do Header */
+/* ========================== */
+/* Header: conteúdo interno   */
+/* ========================== */
 header .container {
   width: 100%;
   height: 50px;
@@ -88,13 +78,11 @@ header .container {
   flex-wrap: nowrap;
 }
 
-/* Logo */
 .logo img {
   height: 90px;
   width: auto;
 }
 
-/* Menu Centralizado */
 .caixa-menu {
   display: flex;
   justify-content: center;
@@ -107,7 +95,6 @@ header .container {
   list-style: none;
   display: flex;
   gap: 20px;
-
 }
 
 .caixa-menu ul li a {
@@ -119,7 +106,6 @@ header .container {
   padding: 5px 10px;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  
 }
 
 .caixa-menu ul li a:hover {
@@ -127,7 +113,6 @@ header .container {
   color: var(--cor-navbar);
 }
 
-/* Redes sociais */
 .redes-sociais {
   display: flex;
   align-items: center;
@@ -146,7 +131,9 @@ header .container {
   filter: brightness(1.3);
 }
 
-/* Hero Section */
+/* ========================== */
+/* Hero Section               */
+/* ========================== */
 section.hero {
   margin-top: -60px;
   text-align: center;
@@ -162,6 +149,10 @@ section.hero p {
   font-size: 1.25rem;
   margin-bottom: 30px;
 }
+
+/* ========================== */
+/* Grade de largada           */
+/* ========================== */
 .grid-largada {
   display: flex;
   flex-direction: column;
@@ -175,23 +166,17 @@ section.hero p {
   justify-content: center;
   gap: 40px;
   width: 100%;
-  /* Removemos o max-width para que as imagens se ajustem à largura da página */
 }
 
 .piloto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Aumentamos a largura para 40% da largura da linha */
-  /* Isso fará com que cada "piloto" ocupe 40% da largura disponível na sua linha */
   width: 40%;
-  /* Se você tiver mais de duas imagens por linha e quiser que elas ocupem 40% cada,
-     o layout pode quebrar. Considere ajustar o `gap` ou o `justify-content` da `.linha`.
-     Para 2 imagens por linha, 40% é um bom ponto de partida. */
 }
 
 .piloto img {
-  width: 100%; /* A imagem preenche 100% da largura do seu contêiner (.piloto) */
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(3, 233, 244, 0.3);
   transition: transform 0.3s ease;
@@ -204,54 +189,37 @@ section.hero p {
 .legenda {
   margin-top: 10px;
   font-weight: 500;
-  text-align: justify; /* Este é o comando para justificar o texto */
-  color: var(--cor-fonte, #ffffff);
+  text-align: justify;
+  color: var(--cor-fonte);
 }
 
 .offset {
-  margin-top: 40px; /* Efeito de recuo */
+  margin-top: 40px;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .linha {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .piloto {
-    /* Em telas pequenas, é melhor que ocupe uma largura maior,
-       ou até 90-100% para não ficar muito pequeno */
-    width: 90%; /* Por exemplo, 90% da largura da tela em dispositivos móveis */
-  }
-
-  .offset {
-    margin-top: 20px;
-  }
-}
-
-
-
-.btn {
+/* ========================== */
+/* Botões gerais              */
+/* ========================== */
+.btn, button[type="submit"], input[type="submit"] {
   background-color: var(--cor-hover);
   color: var(--cor-navbar);
   padding: 15px 30px;
-  text-transform: uppercase;
   font-weight: 700;
+  text-transform: uppercase;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  text-decoration: none;
-  align-items: center;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover, button[type="submit"]:hover, input[type="submit"]:hover {
   background-color: var(--cor-fundo);
   color: var(--cor-hover);
 }
 
-/* Seções gerais - formulário de contato */
+/* ========================== */
+/* Seções e Cards             */
+/* ========================== */
 .section {
   padding: 60px 20px;
   max-width: 1200px;
@@ -265,13 +233,11 @@ section.hero p {
   text-align: center;
 }
 
-/* Cards */
 .cards {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  
 }
 
 .card {
@@ -298,7 +264,9 @@ section.hero p {
   transform: translateY(-10px);
 }
 
-/* Depoimentos */
+/* ========================== */
+/* Depoimentos                */
+/* ========================== */
 .section.light {
   margin-top: 20px;
   background-color: var(--cor-caixa-login);
@@ -323,7 +291,9 @@ cite {
   text-align: right;
 }
 
-/* Formulário */
+/* ========================== */
+/* Formulário de contato      */
+/* ========================== */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -332,88 +302,16 @@ form {
   gap: 15px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
+form input, form textarea {
+  width: 100%;
   padding: 15px 20px;
   border-radius: 8px;
   border: none;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--cor-caixa-login);
-  color: var(--cor-fonte);
-  resize: vertical;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 15px;
-  background-color: #06152e;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-input[type="submit"] {
-  background-color: #ff8433;
-  color: #000;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  border-radius: 10px;
-}
-
-input[type="submit"]:hover {
-  background-color: #e36e1f;
-}
-
-
-textarea {
-  min-height: 120px;
-}
-
-button[type="submit"] {
-  background-color: var(--cor-hover);
-  border: none;
-  padding: 15px 30px;
-  color: var(--cor-navbar);
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: var(--cor-fundo);
-  color: var(--cor-hover);
-}
-
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 8px;
   background-color: #0f1c2c;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  resize: vertical;
 }
 
 form input::placeholder,
@@ -421,34 +319,15 @@ form textarea::placeholder {
   color: #ccc;
 }
 
-form textarea {
-  resize: vertical;
+textarea {
   min-height: 120px;
 }
 
-form .btn,
-form input[type="submit"] {
-  width: 100%;
-  background-color: #ff7a1a;
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-form .btn:hover,
-form input[type="submit"]:hover {
-  background-color: #e56705;
-}
-
-
-
+/* ========================== */
+/* Menu hamburguer e overlay  */
+/* ========================== */
 .menu-toggle {
-  display: none; /* visible apenas em mobile */
+  display: none;
   flex-direction: column;
   cursor: pointer;
 }
@@ -461,9 +340,51 @@ form input[type="submit"]:hover {
   border-radius: 5px;
 }
 
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #001f4d;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
 
+.menu-overlay ul {
+  list-style: none;
+  padding: 0;
+}
 
-/* Footer */
+.menu-overlay ul li {
+  margin: 20px 0;
+}
+
+.menu-overlay ul li a {
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+}
+
+.blur-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  width: 100%;
+  height: 100vh;
+  z-index: 15;
+}
+
+/* ========================== */
+/* Footer                     */
+/* ========================== */
 footer {
   background-color: var(--cor-caixa-login);
   padding: 20px 0;
@@ -474,7 +395,19 @@ footer {
   color: var(--cor-fonte);
 }
 
-/* Responsividade */
+/* ========================== */
+/* Textos em parágrafos       */
+/* ========================== */
+.sobre-texto p {
+  text-indent: 2em;
+  margin-bottom: 1.5em;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* ========================== */
+/* Responsividade             */
+/* ========================== */
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
@@ -501,7 +434,25 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .linha {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .piloto {
+    width: 90%;
+  }
+
+  .offset {
+    margin-top: 20px;
+  }
+
+  .caixa-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .btn {
     width: 100%;
     text-align: center;
@@ -511,19 +462,7 @@ footer {
     width: 90%;
   }
 
-  .caixa-menu ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .redes-sociais {
     gap: 10px;
   }
-}
-
-.sobre-texto p {
-  text-indent: 2em;         /* Recuo do parágrafo */
-  margin-bottom: 1.5em;     /* Espaço entre parágrafos */
-  text-align: justify;      /* Justificação para melhor leitura */
-  line-height: 1.8;         /* Altura de linha confortável */
 }
