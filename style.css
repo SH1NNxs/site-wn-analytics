@@ -24,10 +24,12 @@
 }
 
 body {
-  background: var(--cor-fundo);
+  background: var(--cor-fundo) url('imagens/Fundo site1.png') no-repeat center center fixed;
+  background-size: cover;
   line-height: 1.6;
   padding-top: 80px; /* espaço para o menu fixo */
 }
+
 
 body {
   background: var(--cor-fundo) url('imagens/Fundo site1.png') no-repeat center center fixed;
@@ -240,6 +242,7 @@ section.hero p {
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
+  align-items: center;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
