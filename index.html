@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WN Analytics | Consultoria de Dados</title>
    <link rel="shortcut icon" href="logo-fundo-transparente.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/contact-form.js" defer></script>
 </head>
 <body>
 
@@ -174,15 +176,28 @@
   <section id="contato" class="section">
     <div class="container">
       <h2>Entre em contato</h2>
-      <form>
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
-        <textarea placeholder="Sua mensagem..." required></textarea>
-        <button type="submit" class="btn">Enviar Mensagem</button>
-      </form>
+      <!-- Contato -->
+      <section id="contato" class="section">
+        <div class="container">
+          <h2>Entre em contato</h2>
+          <form id="form">
+            <input type="text" name="name" placeholder="Seu nome" required />
+            <input type="email" name="email" placeholder="Seu e-mail" required />
+            <input type="tel" name="telefone" id="telefone" placeholder="Seu telefone" required />
+            <textarea name="message" placeholder="Sua mensagem..." required></textarea>
+
+            <!-- Campos ocultos para EmailJS -->
+            <input type="hidden" name="title" value="Mensagem via site" />
+            <input type="hidden" name="time" id="time" />
+
+            <input type="submit" id="button" value="ENVIAR MENSAGEM" class="btn" />
+          </form>
+        </div>
+      </section>
+
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <div class="container">

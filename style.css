@@ -331,6 +331,7 @@ form {
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 textarea {
   padding: 15px 20px;
   border-radius: 8px;
@@ -341,6 +342,42 @@ textarea {
   color: var(--cor-fonte);
   resize: vertical;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #06152e;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #ff8433;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #e36e1f;
+}
+
 
 textarea {
   min-height: 120px;
@@ -362,6 +399,49 @@ button[type="submit"]:hover {
   background-color: var(--cor-fundo);
   color: var(--cor-hover);
 }
+
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0f1c2c;
+  color: white;
+  font-size: 16px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #ccc;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form .btn,
+form input[type="submit"] {
+  width: 100%;
+  background-color: #ff7a1a;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form .btn:hover,
+form input[type="submit"]:hover {
+  background-color: #e56705;
+}
+
 
 /* Footer */
 footer {
