@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="imagens/logo fundo transparente.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- Header -->
@@ -15,12 +16,7 @@
       <a href="#" class="logo">
         <img src="imagens/logo fundo transparente.png" alt="Logo WN Analytics">
       </a>
-
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span><span></span><span></span>
-      </div>
-
-      <nav class="caixa-menu" id="menu">
+      <nav class="caixa-menu">
         <ul>
           <li><a href="#inicio">Início</a></li>
           <li><a href="#servicos">Serviços</a></li>
@@ -29,7 +25,6 @@
           <li><a href="#contato">Fale Conosco</a></li>
         </ul>
       </nav>
-
       <div class="redes-sociais">
         <a href="https://wa.me/5581998286308" target="_blank">
           <img src="imagens/Whatsapp.ico" alt="WhatsApp">
@@ -39,8 +34,28 @@
         </a>
       </div>
     </div>
+    <div class="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu-overlay" id="menu-overlay">
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
+
+  <div class="blur-bg" id="blur-bg"></div>
+
+  
   </header>
-  <div id="overlay"></div>
 
    <!-- Início -->
   <section id="inicio" class="hero section">
@@ -176,5 +191,28 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/contact-form.js"></script>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuOverlay = document.getElementById('menu-overlay');
+  const blurBg = document.getElementById('blur-bg');
+
+  menuToggle.addEventListener('click', () => {
+    const isVisible = menuOverlay.style.display === 'flex';
+
+    if (isVisible) {
+      menuOverlay.style.display = 'none';
+      blurBg.style.display = 'none';
+    } else {
+      menuOverlay.style.display = 'flex';
+      blurBg.style.display = 'block';
+    }
+  });
+
+  blurBg.addEventListener('click', () => {
+    menuOverlay.style.display = 'none';
+    blurBg.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>

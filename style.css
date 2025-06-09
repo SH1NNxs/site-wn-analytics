@@ -466,3 +466,14 @@ footer {
     gap: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .caixa-menu {
+    display: none;
+  }
+}
+
