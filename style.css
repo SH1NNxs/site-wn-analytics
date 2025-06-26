@@ -1,11 +1,20 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+/* ========================== */
+/* Variáveis e Reset Básico  */
+/* ========================== */
 :root {
   --cor-fundo: #272729;
   --cor-hover: #F58634;
   --cor-fonte: #ffffff;
+  --cor-fonte-login-pg1: #fffefe;
+  --cor-caixa-login: rgba(0, 0, 0, 0.65);
+  --cor-card-depoimentos: #031336;
   --cor-navbar: #00132c;
+  --cor-fontesecundaria: #5f4918;
+  --cor-bordas: #00060e;
+  --tamanho-fonte-raiz: 16px;
+  --cor-dias-calendar: #007BFF;
 }
 
 * {
@@ -17,26 +26,38 @@
   color: var(--cor-fonte);
 }
 
+/* ========================== */
+/* Corpo                      */
+/* ========================== */
 body {
   background: var(--cor-fundo) url('imagens/Fundo site1.png') no-repeat center center fixed;
   background-size: cover;
   line-height: 1.6;
-  padding-top: 80px;
+  padding-top: 80px; /* Mantém o padding para o header fixo */
 }
 
-/* Header */
+/* ========================== */
+/* Header fixo animado        */
+/* ========================== */
 header {
+  background-color: var(--cor-fundo);
+  background-image: linear-gradient(to bottom, var(--cor-fundo), var(--cor-navbar));
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  animation: header 5s infinite;
+  padding: 8px 20px;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  background-image: linear-gradient(to bottom, var(--cor-fundo), var(--cor-navbar));
-  padding: 10px 20px;
+  left: 0; /* Alterado para 0 */
+  transform: none; /* Removido translateX(-50%) */
+  width: 100%; /* Alterado para 100% */
+  /* Removido max-width: 100%; que era redundante com width: 100% */
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  animation: header 5s infinite;
+  justify-content: space-between; /* Mantido para desktop */
+  opacity: 95%;
+  border-radius: 0; /* Ajustado para 0, se quiser borda, coloque no container interno */
 }
 
 @keyframes header {
@@ -45,30 +66,48 @@ header {
   100% { background-position: 0% 100%; }
 }
 
-.logo img {
+/* ========================== */
+/* Header: conteúdo interno   */
+/* ========================== */
+header .container {
+  width: 100%; /* Permite que o container interno use 100% da largura do header */
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Mantém tudo na mesma linha em desktop */
+  max-width: 1200px; /* Limita a largura máxima do conteúdo do header */
+  margin: 0 auto; /* Centraliza o container interno */
+}
+
+.logo img {
+  height: 60px; /* Ajustado para um tamanho mais razoável em desktop, pode ajustar conforme necessário */
+  width: auto;
 }
 
 .caixa-menu {
-  flex: 1;
   display: flex;
   justify-content: center;
+  flex: 1; /* Permite que o menu ocupe o espaço restante para centralização */
+  height: 28px;
+  /* width: 90%; removido, flex: 1 já gerencia a largura */
 }
 
 .caixa-menu ul {
+  list-style: none;
   display: flex;
   gap: 20px;
-  list-style: none;
 }
 
 .caixa-menu ul li a {
   color: var(--cor-fonte);
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 15px;
   padding: 5px 10px;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .caixa-menu ul li a:hover {
@@ -78,53 +117,251 @@ header {
 
 .redes-sociais {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
 }
 
 .redes-sociais img {
-  width: 26px;
-  height: 26px;
-  transition: 0.3s;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
 }
 
 .redes-sociais img:hover {
   filter: brightness(1.3);
 }
 
-/* Menu Hamburguer */
+/* ========================== */
+/* Hero Section               */
+/* ========================== */
+section.hero {
+  margin-top: -60px;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+section.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+section.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+/* ========================== */
+/* Grade de largada           */
+/* ========================== */
+.grid-largada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.piloto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.piloto img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(3, 233, 244, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.piloto img:hover {
+  transform: scale(1.05);
+}
+
+.legenda {
+  margin-top: 10px;
+  font-weight: 500;
+  text-align: justify;
+  color: var(--cor-fonte);
+}
+
+.offset {
+  margin-top: 40px;
+}
+
+/* ========================== */
+/* Botões gerais              */
+/* ========================== */
+.btn, button[type="submit"], input[type="submit"] {
+  background-color: var(--cor-hover);
+  color: var(--cor-navbar);
+  padding: 15px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover, button[type="submit"]:hover, input[type="submit"]:hover {
+  background-color: var(--cor-fundo);
+  color: var(--cor-hover);
+}
+
+/* ========================== */
+/* Seções e Cards             */
+/* ========================== */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* opacity: 200%; remova ou defina para 1 (100%) se quiser opacidade normal */
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--cor-card-depoimentos);
+  border-radius: 12px;
+  padding: 25px 30px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(3, 233, 244, 0.2);
+  transition: transform 0.3s ease;
+  opacity: 80%;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* ========================== */
+/* Depoimentos                */
+/* ========================== */
+.section.light {
+  margin-top: 20px;
+  background-color: var(--cor-caixa-login);
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--cor-fonte);
+  border-left: 5px solid var(--cor-hover);
+  padding-left: 20px;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ========================== */
+/* Formulário de contato      */
+/* ========================== */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0f1c2c;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  resize: vertical;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #ccc;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+/* ========================== */
+/* Menu hamburguer e overlay  */
+/* ========================== */
 .menu-toggle {
-  display: none;
+  display: none; /* Escondido por padrão, mostrado em mobile */
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
-  z-index: 1001;
+  /* position: relative; Adicione se precisar posicioná-lo com z-index acima de outros elementos em mobile */
+  z-index: 1001; /* Garante que ele fique acima de outros elementos quando ativo */
+  padding: 5px; /* Adicionado para facilitar o clique em telas pequenas */
 }
 
 .menu-toggle span {
-  width: 25px;
   height: 3px;
+  width: 25px;
   background: var(--cor-fonte);
-  border-radius: 3px;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }
 
-/* Menu overlay mobile */
 .menu-overlay {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--cor-navbar);
   width: 100%;
   height: 100vh;
-  z-index: 999;
+  background-color: var(--cor-navbar);
+  color: white;
+  display: none; /* Escondido por padrão, ativado via JS */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Abaixo do menu-toggle, mas acima do conteúdo principal */
 }
 
 .menu-overlay ul {
   list-style: none;
-  text-align: center;
   padding: 0;
 }
 
@@ -133,48 +370,229 @@ header {
 }
 
 .menu-overlay ul li a {
-  color: white;
-  font-size: 22px;
   text-decoration: none;
+  font-size: 22px;
+  color: white;
+  padding: 10px 20px; /* Aumenta a área clicável */
+  display: block; /* Garante que o padding funcione */
+  transition: background-color 0.3s ease;
 }
 
-/* Fundo desfocado */
+.menu-overlay ul li a:hover {
+  background-color: var(--cor-hover);
+}
+
 .blur-bg {
-  display: none;
+  display: none; /* Escondido por padrão, ativado via JS */
   position: fixed;
   top: 0;
   left: 0;
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   width: 100%;
   height: 100vh;
-  z-index: 998;
+  z-index: 998; /* Abaixo do overlay */
 }
 
-/* Responsivo */
+/* ========================== */
+/* Footer                     */
+/* ========================== */
+footer {
+  background-color: var(--cor-caixa-login);
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: var(--cor-fonte);
+}
+
+/* ========================== */
+/* Textos em parágrafos       */
+/* ========================== */
+.sobre-texto p {
+  text-indent: 2em;
+  margin-bottom: 1.5em;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* ========================== */
+/* Responsividade             */
+/* ========================== */
+
+/* Para telas até 992px (Laptop) - Ajuste o breakpoint conforme sentir necessidade */
+@media (max-width: 992px) {
+  .caixa-menu ul {
+    gap: 15px; /* Reduz o espaçamento do menu */
+    font-size: 14px; /* Opcional: Reduz o tamanho da fonte do menu */
+  }
+
+  .redes-sociais img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .logo img {
+    height: 50px; /* Reduz o tamanho do logo */
+  }
+
+  section.hero h2 {
+    font-size: 2.2rem;
+  }
+
+  section.hero p {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Para telas até 768px (Tablet em retrato, Mobile em paisagem) */
 @media (max-width: 768px) {
+  /* Ajustes no Header */
+  header .container {
+    flex-direction: row; /* Mantém logo, hamburguer e redes sociais na mesma linha */
+    justify-content: space-between; /* Distribui-os */
+    flex-wrap: nowrap; /* Impede que eles quebrem a linha */
+    padding: 0 15px; /* Ajusta o padding interno do container */
+    height: auto; /* Deixa a altura se ajustar ao conteúdo */
+  }
+
+  .logo img {
+    height: 45px; /* Reduz o tamanho do logo para mobile */
+  }
+
   .caixa-menu {
-    display: none;
+    display: none; /* Esconde o menu de navegação padrão */
   }
 
   .menu-toggle {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex; /* Mostra o ícone do menu hamburguer */
+    order: 2; /* Coloca o menu hamburguer no centro do header mobile, se desejar */
+    /* Remova order se preferir que ele fique na posição natural do flexbox */
   }
 
   .logo {
-    position: absolute;
-    left: 20px;
+    order: 1; /* Garante que o logo fique na esquerda */
   }
 
   .redes-sociais {
-    position: absolute;
-    right: 20px;
+    order: 3; /* Garante que as redes sociais fiquem na direita */
+    gap: 10px; /* Reduz o espaçamento das redes sociais */
+  }
+  .redes-sociais img {
+    width: 22px;
+    height: 22px;
   }
 
-  .menu-overlay.active,
-  .blur-bg.active {
-    display: flex;
+  /* Ajustes gerais de layout */
+  .section {
+    padding: 40px 15px; /* Reduz o padding das seções */
+  }
+
+  .linha {
+    flex-direction: column; /* Coloca os itens da "linha" em coluna */
+    align-items: center; /* Centraliza os itens na coluna */
+    gap: 20px; /* Reduz o espaçamento */
+  }
+
+  .piloto {
+    width: 90%; /* Aumenta a largura do piloto para ocupar mais espaço */
+  }
+
+  .offset {
+    margin-top: 20px; /* Ajusta o margin-top */
+  }
+
+  .cards {
+    flex-direction: column; /* Coloca os cards em coluna */
+    align-items: center; /* Centraliza os cards */
+    gap: 20px; /* Reduz o espaçamento */
+  }
+
+  .card {
+    width: 90%; /* Aumenta a largura dos cards para ocupar mais espaço */
+    padding: 20px; /* Ajusta o padding dos cards */
+  }
+
+  blockquote {
+    font-size: 1rem; /* Reduz o tamanho da fonte do bloco de citação */
+    padding-left: 15px; /* Ajusta o padding */
+  }
+
+  form {
+    max-width: 90%; /* Aumenta a largura do formulário */
+  }
+
+  form input, form textarea {
+    padding: 12px 15px; /* Ajusta o padding dos campos do formulário */
+  }
+
+  section.hero h2 {
+    font-size: 2rem; /* Reduz o tamanho da fonte do título hero */
+  }
+
+  section.hero p {
+    font-size: 1rem; /* Reduz o tamanho da fonte do parágrafo hero */
+  }
+}
+
+/* Para telas menores que 480px (Mobile pequeno) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px; /* Ajusta o padding superior para um header menor */
+  }
+
+  header {
+    padding: 5px 10px; /* Reduz o padding do header */
+  }
+
+  .logo img {
+    height: 40px; /* Reduz ainda mais o tamanho do logo */
+  }
+
+  .redes-sociais img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu-toggle span {
+    width: 20px; /* Reduz o tamanho do ícone hamburguer */
+    height: 2px;
+    margin-bottom: 4px;
+  }
+
+  section.hero h2 {
+    font-size: 1.8rem;
+  }
+
+  section.hero p {
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 30px 10px; /* Reduz o padding das seções */
+  }
+
+  .piloto {
+    width: 95%; /* Ocupa ainda mais espaço */
+  }
+
+  .card {
+    width: 95%; /* Ocupa ainda mais espaço */
+  }
+
+  blockquote {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 15px 0;
+    font-size: 0.8rem;
+  }
+
+  .menu-overlay ul li a {
+    font-size: 18px; /* Reduz o tamanho da fonte do menu overlay */
+    padding: 8px 15px;
   }
 }
