@@ -82,7 +82,7 @@ header .container {
 }
 
 .logo img {
-  height: 60px; /* Ajustado para um tamanho mais razoável em desktop, pode ajustar conforme necessário */
+  height: 90px; /* Ajustado para um tamanho mais razoável em desktop, pode ajustar conforme necessário */
   width: auto;
 }
 
@@ -123,8 +123,8 @@ header .container {
 }
 
 .redes-sociais img {
-  width: 28px;
-  height: 28px;
+  height: 40px;
+  width: auto;
   cursor: pointer;
   filter: brightness(0.9);
   transition: filter 0.3s ease;
