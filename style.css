@@ -541,11 +541,11 @@ footer {
 /* Para telas menores que 480px (Mobile pequeno) */
 @media (max-width: 480px) {
   body {
-    padding-top: 60px; /* Ajusta o padding superior para um header menor */
+    padding-top: 50px; /* Ajusta o padding superior para um header menor */
   }
 
   header {
-    padding: 5px 10px; /* Reduz o padding do header */
+    padding: 5px 80px; /* Reduz o padding do header */
   }
 
   .logo img {
