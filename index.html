@@ -10,56 +10,51 @@
 
 <body>
 
-  <!-- Header -->
+
 <header>
-  <div class="container header-wrapper">
-    <div class="logo">
-      <a href="#"><img src="imagens/logo fundo transparente.png" alt="Logo WN Analytics"></a>
+        <div class="container">
+            <div class="logo">
+                <img src="imagens/logo fundo transparente.png" alt="Logo VM Analytics">
+            </div>
+            <nav class="caixa-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                </ul>
+            </nav>
+            <div class="redes-sociais">
+                <a href="https://wa.me/seunumerodowhatsapp" target="_blank"><img src="imagens/Whatsapp.ico" alt="WhatsApp"></a>
+                <a href="https://instagram.com/seuinstagram" target="_blank"><img src="imagens/Instagram.ico" alt="Instagram"></a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="close-menu" id="closeMenu">X</button>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Fale Conosco</a></li>
+        </ul>
     </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <div class="blur-bg" id="blurBg"></div>
 
-    <nav class="caixa-menu" id="caixa-menu">
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Fale Conosco</a></li>
-      </ul>
-    </nav>
-
-    <div class="redes-sociais">
-      <a href="https://wa.me/5581998286308" target="_blank"><img src="imagens/Whatsapp.ico" alt="WhatsApp"></a>
-      <a href="https://www.instagram.com/wnanalytics/" target="_blank"><img src="imagens/Instagram.ico" alt="Instagram"></a>
-    </div>
-  </div>
-
-  <div class="menu-overlay" id="menu-overlay">
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#depoimentos">Depoimentos</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#contato">Fale Conosco</a></li>
-    </ul>
-  </div>
-
-  <div class="blur-bg" id="blur-bg"></div>
-</header>
-
-   <!-- Início -->
-  <section id="inicio" class="hero section">
-    <div class="container">
-      <h2>Transformamos dados em decisões inteligentes</h2>
-      <p>Soluções acessíveis de análise de dados, consultoria e serviços de TI em geral, para alavancar seu negócio.</p>
-      <a href="#contato" class="btn">Solicitar Consultoria</a>
-    </div>
-  </section>
+   <main>
+        <section class="hero" id="inicio">
+            <h2>Transformamos dados em decisões inteligentes</h2>
+            <p>Conheça nossas soluções em análise de dados e otimize seus resultados.</p>
+            <a href="#servicos" class="btn">Saiba Mais</a>
+        </section>
 
   <!-- Exemplos de serviços -->
       <section class="grid-largada">
@@ -99,68 +94,72 @@
     </div>
   </section>
 
- <!-- Serviços -->
-  <section id="servicos" class="section">
-    <div class="container">
-      <h2>O serviço sob medida que seu negócio precisa (sem complicação!)</h2>
-      <div class="cards">
-        <div class="card"><h3>Consultoria de Dados</h3><p>Entenda, organize e aproveite seus dados com inteligência.</p></div>
-        <div class="card"><h3>Dashboards Inteligentes</h3><p>Visualize dados em tempo real com gráficos claros e interativos.</p></div>
-        <div class="card"><h3>Treinamentos Personalizados</h3><p>Capacite sua equipe com ferramentas tecnológicas úteis.</p></div>
-        <div class="card"><h3>Serviços de TI em Geral</h3><p>Redes, computadores, internet e suporte técnico completo.</p></div>
-        <div class="card"><h3>Criação de Sites Profissionais</h3><p>Desenvolvimento completo para sua presença online.</p></div>
-        <div class="card"><h3>Identidade Tecnológica</h3><p>Organização digital, e-mail corporativo e mais.</p></div>
-        <div class="card"><h3>Consultoria em Produtividade</h3><p>Otimize seu tempo e os processos do seu time.</p></div>
-        <div class="card"><h3>Automação de Processos</h3><p>Elimine tarefas repetitivas e aumente a eficiência.</p></div>
-      </div>
-    </div>
-  </section>
+    <!-- Serviços -->
+      <section id="servicos" class="section">
+        <div class="container">
+          <h2>O serviço sob medida que seu negócio precisa (sem complicação!)</h2>
+          <div class="cards">
+            <div class="card"><h3>Consultoria de Dados</h3><p>Entenda, organize e aproveite seus dados com inteligência.</p></div>
+            <div class="card"><h3>Dashboards Inteligentes</h3><p>Visualize dados em tempo real com gráficos claros e interativos.</p></div>
+            <div class="card"><h3>Treinamentos Personalizados</h3><p>Capacite sua equipe com ferramentas tecnológicas úteis.</p></div>
+            <div class="card"><h3>Serviços de TI em Geral</h3><p>Redes, computadores, internet e suporte técnico completo.</p></div>
+            <div class="card"><h3>Criação de Sites Profissionais</h3><p>Desenvolvimento completo para sua presença online.</p></div>
+            <div class="card"><h3>Identidade Tecnológica</h3><p>Organização digital, e-mail corporativo e mais.</p></div>
+            <div class="card"><h3>Consultoria em Produtividade</h3><p>Otimize seu tempo e os processos do seu time.</p></div>
+            <div class="card"><h3>Automação de Processos</h3><p>Elimine tarefas repetitivas e aumente a eficiência.</p></div>
+          </div>
+        </div>
+      </section>
 
-  <section id="inicio" class="hero section">
-    <div class="container">
-      <a href="#contato" class="btn">Solicitar Consultoria</a>
-    </div>
-  </section>
 
-  <!-- Depoimentos -->
-  <section id="depoimentos" class="section light">
-    <div class="container">
-      <h2>O que nossos clientes dizem</h2>
-      <blockquote>
-        <p>“Com a WN Analytics, entendi como os números podiam me ajudar a vender mais. Super recomendo!”</p>
-        <cite>– Carla Souza, Loja Foco Total</cite>
-      </blockquote>
-    </div>
-  </section>
+
+  
+
+      <section id="inicio" class="hero section">
+        <div class="container">
+          <a href="#contato" class="btn">Solicitar Consultoria</a>
+        </div>
+      </section>
+
+      <!-- Depoimentos -->
+      <section id="depoimentos" class="section light">
+        <div class="container">
+          <h2>O que nossos clientes dizem</h2>
+          <blockquote>
+            <p>“Com a WN Analytics, entendi como os números podiam me ajudar a vender mais. Super recomendo!”</p>
+            <cite>– Carla Souza, Loja Foco Total</cite>
+          </blockquote>
+        </div>
+      </section>
 
 
   
   <!-- Sobre -->
-  <section id="sobre" class="section light">
-    <div class="container sobre-texto">
-      <h2>Sobre a WN Analytics</h2>
-    <p>
-      Na WN Analytics, nós acreditamos que a tecnologia e a gestão inteligente de dados não são privilégio de grandes corporações. Pelo contrário, são ferramentas essenciais para qualquer negócio que busca crescer e prosperar.
-    </p>
+      <section id="sobre" class="section light">
+        <div class="container sobre-texto">
+          <h2>Sobre a WN Analytics</h2>
+        <p>
+          Na WN Analytics, nós acreditamos que a tecnologia e a gestão inteligente de dados não são privilégio de grandes corporações. Pelo contrário, são ferramentas essenciais para qualquer negócio que busca crescer e prosperar.
+        </p>
 
-    <p>
-      Nossa jornada começou com anos de experiência em empresas onde o acesso à tecnologia de ponta era visto como algo distante para os pequenos e médios negócios. Vimos de perto como essa mentalidade limitava o potencial de tantas empresas. Mas, em vez de aceitar esse mito, fomos atrás. Buscamos capacitação, conhecimento e soluções que realmente fizessem a diferença, sem os custos proibitivos dos grandes softwares.
-    </p>
+        <p>
+          Nossa jornada começou com anos de experiência em empresas onde o acesso à tecnologia de ponta era visto como algo distante para os pequenos e médios negócios. Vimos de perto como essa mentalidade limitava o potencial de tantas empresas. Mas, em vez de aceitar esse mito, fomos atrás. Buscamos capacitação, conhecimento e soluções que realmente fizessem a diferença, sem os custos proibitivos dos grandes softwares.
+        </p>
 
-    <p>
-      É por isso que a WN Analytics nasceu. Nossa missão é clara: levar soluções inteligentes, acessíveis e eficientes para o seu negócio. Seja você um pequeno empreendedor ou uma média empresa, nós estamos aqui para desmistificar a gestão de dados e a tecnologia, mostrando que é possível otimizar processos, tomar decisões mais assertivas e alcançar um crescimento sustentável.
-    </p>
+        <p>
+          É por isso que a WN Analytics nasceu. Nossa missão é clara: levar soluções inteligentes, acessíveis e eficientes para o seu negócio. Seja você um pequeno empreendedor ou uma média empresa, nós estamos aqui para desmistificar a gestão de dados e a tecnologia, mostrando que é possível otimizar processos, tomar decisões mais assertivas e alcançar um crescimento sustentável.
+        </p>
 
-    <p>
-      Com a WN Analytics, você tem o poder dos dados na palma da sua mão. Estamos prontos para ajudar sua empresa a quebrar barreiras e trilhar um caminho de sucesso, porque acreditamos que todo negócio, independente do tamanho, merece prosperar com o apoio da melhor tecnologia.
-    </p>
-    </div>
-  </section>
+        <p>
+          Com a WN Analytics, você tem o poder dos dados na palma da sua mão. Estamos prontos para ajudar sua empresa a quebrar barreiras e trilhar um caminho de sucesso, porque acreditamos que todo negócio, independente do tamanho, merece prosperar com o apoio da melhor tecnologia.
+        </p>
+        </div>
+      </section>
 
   <!-- Contato -->
   <section id="contato" class="section">
     <div class="container">
-      <h2>Entre em contato</h2>
+      <h2>Fale Conosco</h2>
       <form id="form">
         <input type="text" name="name" placeholder="Seu nome" required />
         <input type="email" name="email" placeholder="Seu e-mail" required />
@@ -184,21 +183,53 @@
   </footer>
 
   <!-- Scripts -->
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuOverlay = document.getElementById('menu-overlay');
-  const blurBg = document.getElementById('blur-bg');
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const closeMenu = document.getElementById('closeMenu');
+            const blurBg = document.getElementById('blurBg');
+            const menuLinks = menuOverlay.querySelectorAll('ul li a'); // Seleciona todos os links dentro do overlay
 
-  menuToggle.addEventListener('click', () => {
-    menuOverlay.classList.toggle('active');
-    blurBg.classList.toggle('active');
-  });
+            // Função para abrir o menu
+            function openMenu() {
+                menuOverlay.style.display = 'flex'; // Exibe o overlay
+                blurBg.style.display = 'block'; // Exibe o fundo borrado
+                document.body.style.overflow = 'hidden'; // Evita rolagem do corpo
+            }
 
-  blurBg.addEventListener('click', () => {
-    menuOverlay.classList.remove('active');
-    blurBg.classList.remove('active');
-  });
-</script>
+            // Função para fechar o menu
+            function closeMenuFunction() {
+                menuOverlay.style.display = 'none'; // Esconde o overlay
+                blurBg.style.display = 'none'; // Esconde o fundo borrado
+                document.body.style.overflow = ''; // Restaura a rolagem do corpo
+            }
 
+            // Evento para abrir o menu (clique no hamburguer)
+            menuToggle.addEventListener('click', openMenu);
+
+            // Evento para fechar o menu (clique no botão 'X')
+            closeMenu.addEventListener('click', closeMenuFunction);
+
+            // Evento para fechar o menu (clique no fundo borrado)
+            blurBg.addEventListener('click', closeMenuFunction);
+
+            // Evento para fechar o menu ao clicar em um link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    // Opcional: Se os links forem âncoras na mesma página, você pode adicionar um pequeno atraso
+                    // para a navegação suave antes de fechar o menu, mas para simples fechamento, é direto.
+                    closeMenuFunction(); // Fecha o menu
+                });
+            });
+
+            // Opcional: Fechar menu ao redimensionar a tela (para desktop)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) { // Acima do breakpoint mobile que esconde o hamburguer
+                    closeMenuFunction();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

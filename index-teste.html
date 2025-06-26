@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Empresa - Soluções Inteligentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="imagens/logo_vm_analytics.png" alt="Logo VM Analytics">
+            </div>
+            <nav class="caixa-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                </ul>
+            </nav>
+            <div class="redes-sociais">
+                <a href="https://wa.me/seunumerodowhatsapp" target="_blank"><img src="imagens/whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://instagram.com/seuinstagram" target="_blank"><img src="imagens/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="close-menu" id="closeMenu">X</button>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Fale Conosco</a></li>
+        </ul>
+    </div>
+
+    <div class="blur-bg" id="blurBg"></div>
+
+    <main>
+        <section class="hero" id="inicio">
+            <h2>Transformamos dados em decisões inteligentes</h2>
+            <p>Conheça nossas soluções em análise de dados e otimize seus resultados.</p>
+            <a href="#servicos" class="btn">Saiba Mais</a>
+        </section>
+
+        <section class="grid-largada">
+            <h2>Nossas Especialidades</h2>
+            <div class="linha">
+                <div class="piloto">
+                    <img src="imagens/analise_dados.jpg" alt="Análise de Dados">
+                    <p class="legenda">Análise profunda para insights acionáveis.</p>
+                </div>
+                <div class="piloto offset">
+                    <img src="imagens/dashboard.jpg" alt="Dashboards Interativos">
+                    <p class="legenda">Dashboards personalizados para acompanhamento em tempo real.</p>
+                </div>
+            </div>
+            <div class="linha">
+                <div class="piloto">
+                    <img src="imagens/consultoria.jpg" alt="Consultoria Estratégica">
+                    <p class="legenda">Consultoria para transformar dados em estratégia de negócio.</p>
+                </div>
+                <div class="piloto offset">
+                    <img src="imagens/automacao.jpg" alt="Automação de Relatórios">
+                    <p class="legenda">Automação de relatórios para economizar tempo e recursos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="servicos">
+            <h2>O que oferecemos</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Business Intelligence</h3>
+                    <p>Implementação de ferramentas de BI e construção de relatórios.</p>
+                </div>
+                <div class="card">
+                    <h3>Data Science</h3>
+                    <p>Modelagem preditiva e insights avançados para o seu negócio.</p>
+                </div>
+                <div class="card">
+                    <h3>Integração de Dados</h3>
+                    <p>Unificamos suas fontes de dados para uma visão 360°.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section light" id="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <blockquote>
+                "A VM Analytics transformou a forma como enxergamos nossos dados. As decisões agora são muito mais assertivas!"
+                <cite>- Ana Clara, CEO da Empresa XYZ</cite>
+            </blockquote>
+        </section>
+
+        <section class="section" id="sobre">
+            <h2>Sobre Nós</h2>
+            <div class="sobre-texto">
+                <p>Na VM Analytics, somos apaixonados por dados e acreditamos no poder que eles têm de impulsionar negócios. Nossa missão é simplificar a complexidade dos dados e transformá-los em informações claras e úteis, permitindo que nossos clientes tomem decisões mais inteligentes e estratégicas.</p>
+                <p>Com uma equipe multidisciplinar e expertise em diversas ferramentas e tecnologias, oferecemos soluções personalizadas que atendem às necessidades específicas de cada empresa, desde a coleta e organização dos dados até a geração de dashboards interativos e consultoria especializada.</p>
+                <p>Nosso compromisso é com o seu sucesso. Venha descobrir como a análise de dados pode revolucionar o seu negócio!</p>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <h2>Fale Conosco</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <input type="text" placeholder="Assunto">
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 VM Analytics. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const closeMenu = document.getElementById('closeMenu');
+            const blurBg = document.getElementById('blurBg');
+            const menuLinks = menuOverlay.querySelectorAll('ul li a'); // Seleciona todos os links dentro do overlay
+
+            // Função para abrir o menu
+            function openMenu() {
+                menuOverlay.style.display = 'flex'; // Exibe o overlay
+                blurBg.style.display = 'block'; // Exibe o fundo borrado
+                document.body.style.overflow = 'hidden'; // Evita rolagem do corpo
+            }
+
+            // Função para fechar o menu
+            function closeMenuFunction() {
+                menuOverlay.style.display = 'none'; // Esconde o overlay
+                blurBg.style.display = 'none'; // Esconde o fundo borrado
+                document.body.style.overflow = ''; // Restaura a rolagem do corpo
+            }
+
+            // Evento para abrir o menu (clique no hamburguer)
+            menuToggle.addEventListener('click', openMenu);
+
+            // Evento para fechar o menu (clique no botão 'X')
+            closeMenu.addEventListener('click', closeMenuFunction);
+
+            // Evento para fechar o menu (clique no fundo borrado)
+            blurBg.addEventListener('click', closeMenuFunction);
+
+            // Evento para fechar o menu ao clicar em um link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    // Opcional: Se os links forem âncoras na mesma página, você pode adicionar um pequeno atraso
+                    // para a navegação suave antes de fechar o menu, mas para simples fechamento, é direto.
+                    closeMenuFunction(); // Fecha o menu
+                });
+            });
+
+            // Opcional: Fechar menu ao redimensionar a tela (para desktop)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) { // Acima do breakpoint mobile que esconde o hamburguer
+                    closeMenuFunction();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

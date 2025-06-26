@@ -15,6 +15,7 @@
   --cor-bordas: #00060e;
   --tamanho-fonte-raiz: 16px;
   --cor-dias-calendar: #007BFF;
+  --cor-btn-close-menu: #FF0000;
 }
 
 * {
@@ -594,5 +595,33 @@ footer {
   .menu-overlay ul li a {
     font-size: 18px; /* Reduz o tamanho da fonte do menu overlay */
     padding: 8px 15px;
+  }
+}
+
+/* Estilo para o botão de fechar */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--cor-btn-close-menu); /* Cor do texto, use sua variável de fonte */
+  font-size: 2.5rem; /* Tamanho do "X" */
+  cursor: pointer;
+  padding: 10px; /* Área clicável maior */
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.close-menu:hover {
+  color: var(--cor-hover); /* Cor ao passar o mouse */
+  transform: rotate(90deg); /* Efeito de rotação ao passar o mouse */
+}
+
+@media (max-width: 480px) {
+  .close-menu {
+    font-size: 2rem; /* Reduz o tamanho do X em telas muito pequenas */
+    top: 15px;
+    right: 15px;
   }
 }
