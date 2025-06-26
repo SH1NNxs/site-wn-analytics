@@ -549,7 +549,7 @@ footer {
   }
 
   .logo img {
-    height: 40px; /* Reduz ainda mais o tamanho do logo */
+    height: 100px; /* Reduz ainda mais o tamanho do logo */
   }
 
   .redes-sociais img {
@@ -600,22 +600,29 @@ footer {
 
 /* Estilo para o botão de fechar */
 .close-menu {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: var(--cor-btn-close-menu); /* Cor do texto, use sua variável de fonte */
-  font-size: 2.5rem; /* Tamanho do "X" */
-  cursor: pointer;
-  padding: 10px; /* Área clicável maior */
-  transition: color 0.3s ease, transform 0.3s ease;
-  z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semitransparente */
+    border-radius: 50%; /* Para deixá-lo redondo */
+    width: 50px; /* Largura para o círculo */
+    height: 50px; /* Altura para o círculo */
+    display: flex; /* Para centralizar o 'X' dentro do círculo */
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remover padding padrão se for usar width/height fixos */
+    border: 2px solid var(--cor-fonte); /* Borda fina com a cor da fonte */
 }
 
 .close-menu:hover {
   color: var(--cor-hover); /* Cor ao passar o mouse */
   transform: rotate(90deg); /* Efeito de rotação ao passar o mouse */
+  background-color: var(--cor-hover); /* Sua cor de hover, ou outra cor */
+  border-color: var(--cor-hover); /* Mudar a cor da borda no hover */
+
+}
+
+.close-menu svg {
+    width: 100%; /* Ajusta o ícone ao tamanho do botão */
+    height: 100%;
+    fill: currentColor; /* Faz o SVG herdar a cor do pai (.close-menu) */
 }
 
 @media (max-width: 480px) {
