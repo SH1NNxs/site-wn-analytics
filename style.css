@@ -550,6 +550,7 @@ footer {
 
   .logo img {
     height: 40px; /* Reduz ainda mais o tamanho do logo */
+    text-align: left;
   }
 
   .redes-sociais img {
