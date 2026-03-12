@@ -1,107 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio – Washington Santos</title>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washington Santos | Software & Data Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Fonte e CSS externo -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="portfolio.css" />
-  </head>
-
-  <body>
-    <!-- Cabeçalho -->
-    <header>
-      <div class="container">
-        <h1>Washington Santos</h1>
-        <p>
-          Especialista em análise de dados • Desenvolvimento de soluções
-          inteligentes • Consultoria tecnológica
-        </p>
-      </div>
+    <header class="navbar">
+        <div class="logo-area">
+            <span class="logo">WS</span>
+            <span class="title-divider">WASHINGTON SANTOS | SOFTWARE & DATA ENGINEERING</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Projetos</a>
+            <button class="btn-cv">Baixar CV</button>
+        </nav>
     </header>
 
-    <!-- Conteúdo -->
-    <main class="container">
-      <!-- Sobre Mim -->
-      <section>
-        <h2>Sobre Mim</h2>
-        <p>
-          Sou especialista em análise de dados, desenvolvimento de soluções
-          inteligentes e consultoria tecnológica. Auxilio empresas na tomada de
-          decisões estratégicas, criando ferramentas, automações e modelos que
-          melhoram produtividade, reduzem erros e aumentam a eficiência
-          operacional.
-        </p>
+    <main class="bento-grid">
+        
+        <section class="card card-profile">
+            <div class="photo-container">
+                <img src="Img/Washington Santos.png" alt="Washington Santos" class="profile-img">
+            </div>
+            <h1>Washington Santos</h1>
+            <div class="subtitle">
+                <p>WN Analytics</p>
+                <p>Coordenador de TI</p>
+                <p>Especialista em Dados</p>
+            </div>
+            <p class="bio">Especialista em transformar dados brutos em decisões estratégicas e ecossistemas inteligentes.</p>
+        </section>
 
-        <p>
-          Atuo também com desenvolvimento de software, gestão de projetos,
-          infraestrutura e organização de processos, oferecendo soluções
-          acessíveis especialmente para micro e pequenas empresas.
-        </p>
-      </section>
+        <section class="card card-about">
+            <h2 class="label">Sobre Mim</h2>
+            <div class="about-content">
+                <p>Atuo na linha de frente da transformação digital de micro e pequenas empresas, criando ferramentas personalizadas que eliminam gargalos e aumentam a eficiência operacional.</p>
+                <p>Minha abordagem une a Engenharia de Software à Gestão de Projetos, garantindo que a tecnologia seja o principal motor de crescimento dos meus clientes.</p>
+            </div>
+        </section>
 
-      <!-- Projetos em Destaque -->
-      <section>
-        <h2>Projetos em Destaque</h2>
+        <section class="card card-education">
+            <h2 class="label">Trajetória</h2>
+            <div class="edu-item">
+                <h3 class="gold">Ciência da Computação</h3>
+                <p class="edu-meta">Bacharelado | Previsão 2027</p>
+            </div>
+            <div class="edu-divider"></div>
+            <div class="edu-item">
+                <h3>Licenciatura em Biologia</h3>
+                <p class="edu-meta">Concluído | 2016</p>
+            </div>
+        </section>
 
-        <ul>
-          <li>
-            <strong>WN NEXUS – Sistema empresarial inteligente</strong><br />
-            Plataforma de vendas, indicadores, dashboards e automações
-            administrativas.
-          </li>
+        <section class="card card-menu-projects">
+            <h2 class="label">Consultoria</h2>
+            <nav class="lista-clicavel">
+                <button class="project-btn active" onclick="showProject('analytics')">WN Analytics</button>
+                <button class="project-btn" onclick="showProject('nexus')">WN Nexus</button>
+                <button class="project-btn" onclick="showProject('bi')">Data & BI</button>
+                <button class="project-btn" onclick="showProject('infra')">Consultoria TI</button>
+            </nav>
+        </section>
 
-          <li>
-            <strong>Dashboard Gerencial – Depósito de Malhas</strong><br />
-            Relatórios avançados, KPIs e visão estratégica para tomada de
-            decisão.
-          </li>
+        <section class="card card-detalhes-tecnicos">
+            <h2 class="label">Visão Técnica</h2>
+            <div id="project-details">
+                <h3 class="gold">WN Analytics</h3>
+                <p class="project-desc">Inteligência de negócio e análise de processos para suporte estratégico à decisão corporativa.</p>
+                <div class="tech-stack-projeto">
+                    <div class="tags-mini">
+                        <span>Consultoria</span><span>KPIs</span><span>Métricas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <li>
-            <strong>E-book “Informática Descomplicada”</strong><br />
-            Material educacional da WN Analytics para capacitação tecnológica de
-            iniciantes.
-          </li>
+        <section class="card card-galeria">
+            <h2 class="label">Visualização</h2>
+            <div id="project-gallery" class="photo-grid">
+                <img src="Img/analytics-view.png" alt="Analytics" class="gallery-img">
+            </div>
+        </section>
 
-          <li>
-            <strong>Projetos de automação</strong><br />
-            Integrações, rotinas Python, dashboards, relatórios e sistemas
-            internos.
-          </li>
-        </ul>
-      </section>
+        <section class="card card-stack">
+            <h2 class="label">Habilidades Técnicas</h2>
+            <div class="tags-container">
+                <span>SQL</span><span>Python</span><span>JavaScript</span><span>ETL</span><span>Power BI</span>
+                <span>Dev Web</span><span>Gestão de Projetos</span><span>Infraestrutura</span>
+            </div>
+        </section>
 
-      <!-- Habilidades -->
-      <section>
-        <h2>Habilidades Técnicas</h2>
-        <p>
-          SQL • Python • JavaScript • Banco de Dados • ETL • Dashboards • Power
-          BI • Automação de Processos • Desenvolvimento Web • Gestão de Projetos
-          • Segurança da Informação • Infraestrutura • Consultoria tecnológica
-        </p>
-      </section>
+        <section class="card card-redes-footer">
+            <div class="redes-content">
+                <a href="#">WhatsApp</a>
+                <a href="#">E-mail Profissional</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </section>
 
-      <!-- Contato -->
-      <section>
-        <h2>Contato</h2>
-        <p>Entre em contato para projetos, consultorias ou parcerias.</p>
-
-        <ul>
-          <li>
-            <a href="https://wa.me/5581986939145" target="_blank"
-              >Falar pelo WhatsApp</a
-            >
-          </li>
-          <li><a href="mailto:wnanalytics@gmail.com">Enviar e-mail</a></li>
-        </ul>
-      </section>
     </main>
 
-    <footer>© 2025 Washington Santos — WN Analytics</footer>
-  </body>
+    <script>
+        function showProject(name) {
+            const details = document.getElementById('project-details');
+            const gallery = document.getElementById('project-gallery');
+            document.querySelectorAll('.project-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const data = {
+                analytics: { title: "WN Analytics", desc: "Inteligência de negócio e análise estratégica corporativa.", tags: ["Métricas", "Processos"], img: "Img/analytics-view.png" },
+                nexus: { title: "WN Nexus", desc: "Sistema empresarial focado em Engenharia de Software e Gestão.", tags: ["Python", "SQL", "Flet"], img: "Img/nexus-view.png" },
+                bi: { title: "Data & BI", desc: "Soluções de ETL e dashboards de alta performance.", tags: ["Power BI", "Python", "ETL"], img: "Img/bi-view.png" },
+                infra: { title: "Consultoria TI", desc: "Estruturação de infraestrutura e segurança da informação.", tags: ["Infra", "Segurança"], img: "Img/infra-view.png" }
+            };
+
+            const p = data[name];
+            details.innerHTML = `<h3 class="gold">${p.title}</h3><p class="project-desc">${p.desc}</p>
+                <div class="tags-mini">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>`;
+            gallery.innerHTML = `<img src="${p.img}" alt="${p.title}" class="gallery-img">`;
+        }
+    </script>
+</body>
 </html>
