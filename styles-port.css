@@ -1,0 +1,89 @@
+:root {
+    --p-bg: #020617;
+    --p-card: rgba(15, 23, 42, 0.8);
+    --p-gold: #facc15;
+    --p-gold-muted: #eab308;
+    --p-text: #f8fafc;
+    --p-sub: #94a3b8;
+    --p-border: rgba(255, 255, 255, 0.08);
+    --p-radius: 20px;
+    --p-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.p-page {
+    background: radial-gradient(circle at top right, #1e293b, var(--p-bg)) !important;
+    background-attachment: fixed !important;
+    color: var(--p-text); margin: 0; font-family: 'Inter', sans-serif; line-height: 1.5;
+}
+
+.p-header {
+    background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--p-border); position: fixed;
+    top: 0; width: 100%; z-index: 1000; padding: 1rem 0;
+}
+
+.p-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.p-logo img { height: 40px; }
+.p-nav ul { list-style: none; display: flex; gap: 2rem; }
+.p-nav a { text-decoration: none; color: var(--p-sub); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+.p-nav a.p-active { color: var(--p-gold); }
+
+.p-wrapper { max-width: 1200px; margin: 110px auto 40px; padding: 0 20px; }
+
+/* GRID ÁREAS - MAPEAMENTO FINAL */
+.p-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "profile about about edu"
+        "profile menu details details"
+        "profile stack details details"
+        "connect connect connect connect";
+    gap: 1.25rem;
+}
+
+.p-card { background: var(--p-card); border: 1px solid var(--p-border); border-radius: var(--p-radius); padding: 1.8rem; transition: var(--p-transition); display: flex; flex-direction: column; }
+.p-card:hover { border-color: rgba(250, 204, 21, 0.4); transform: translateY(-5px); }
+
+.p-profile { grid-area: profile; align-items: center; text-align: center; justify-content: flex-start; min-height: 550px; }
+.p-about { grid-area: about; }
+.p-edu { grid-area: edu; }
+.p-menu { grid-area: menu; }
+.p-stack { grid-area: stack; }
+.p-details { grid-area: details; min-height: 400px; }
+.p-connect { grid-area: connect; background: linear-gradient(135deg, var(--p-gold) 0%, var(--p-gold-muted) 100%); color: #020617; padding: 2.5rem !important; }
+
+/* ESTILIZAÇÃO INTERNA PERFIL */
+.p-photo { width: 120px; height: 120px; border-radius: 25px; border: 2px solid var(--p-gold); margin-bottom: 1rem; overflow: hidden; }
+.p-photo img { width: 100%; height: 100%; object-fit: cover; }
+.p-profile h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.3rem; }
+.p-bio { font-size: 1.05rem; margin: 0.5rem 0 auto; }
+.p-profile-stats { display: flex; justify-content: space-between; width: 100%; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--p-border); }
+.p-stat-value { font-size: 1rem; font-weight: 850; color: var(--p-gold); display: block; }
+.p-stat-label { font-size: 0.65rem; text-transform: uppercase; color: var(--p-sub); }
+
+/* DETALHES DINÂMICOS */
+.p-details-content { display: flex; flex-direction: column; gap: 1.5rem; height: 100%; }
+.p-visual-side { border-radius: 14px; overflow: hidden; border: 1px solid var(--p-border); background: #000; flex: 1; }
+.p-img-fluid { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+
+/* BOTÕES E LABELS */
+.p-gold-tag { color: var(--p-gold); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
+.p-label { color: var(--p-sub); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 1rem; }
+.p-btn { background: rgba(255,255,255,0.03); border: 1px solid var(--p-border); color: var(--p-text); padding: 12px; border-radius: 12px; cursor: pointer; text-align: left; font-weight: 700; margin-bottom: 0.6rem; }
+.p-btn.active { border-color: var(--p-gold); color: var(--p-gold); background: rgba(250, 204, 21, 0.1); }
+.p-tech-icons span { font-size: 0.7rem; background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; margin: 0 5px 5px 0; display: inline-block; }
+
+/* CONTATO */
+.p-connect-grid { display: flex; justify-content: space-between; align-items: center; }
+.p-btn-social { text-decoration: none; background: #020617; color: #fff !important; padding: 12px 20px; border-radius: 14px; font-weight: 700; font-size: 0.85rem; transition: var(--p-transition); margin-left: 0.5rem; }
+.p-btn-social:hover { transform: translateY(-3px); background: #1e293b; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .p-bento-grid { grid-template-areas: "profile about about edu" "menu details details details" "stack details details details" "connect connect connect connect"; }
+}
+@media (max-width: 768px) {
+    .p-bento-grid { display: flex; flex-direction: column; }
+    .p-connect-grid { flex-direction: column; text-align: center; gap: 1.5rem; }
+}

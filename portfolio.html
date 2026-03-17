@@ -1,129 +1,142 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Washington Santos | Software & Data Engineering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Portfólio | Washington Santos</title>
+    <link rel="stylesheet" href="styles-port.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="p-page">
 
-    <header class="navbar">
-        <div class="logo-area">
-            <span class="logo">WS</span>
-            <span class="title-divider">WASHINGTON SANTOS | SOFTWARE & DATA ENGINEERING</span>
+    <header class="p-header">
+        <div class="p-container">
+            <div class="p-logo">
+                <a href="index.html"><img src="imagens/logo fundo transparente.png" alt="WN Analytics"></a>
+            </div>
+            <nav class="p-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="portfolio.html" class="p-active">Portfólio</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Projetos</a>
-            <button class="btn-cv">Baixar CV</button>
-        </nav>
     </header>
 
-    <main class="bento-grid">
-        
-        <section class="card card-profile">
-            <div class="photo-container">
-                <img src="imagens/Washington Santos.png" alt="Washington Santos" class="profile-img">
-            </div>
-            <h1>Washington Santos</h1>
-            <div class="subtitle">
-                <p>WN Analytics</p>
-                <p>Coordenador de TI</p>
-                <p>Especialista em Dados</p>
-            </div>
-            <p class="bio">Especialista em transformar dados brutos em decisões estratégicas e ecossistemas inteligentes.</p>
-        </section>
-
-        <section class="card card-about">
-            <h2 class="label">Sobre Mim</h2>
-            <div class="about-content">
-                <p>Atuo na linha de frente da transformação digital de micro e pequenas empresas, criando ferramentas personalizadas que eliminam gargalos e aumentam a eficiência operacional.</p>
-                <p>Minha abordagem une a Engenharia de Software à Gestão de Projetos, garantindo que a tecnologia seja o principal motor de crescimento dos meus clientes.</p>
-            </div>
-        </section>
-
-        <section class="card card-education">
-            <h2 class="label">Trajetória</h2>
-            <div class="edu-item">
-                <h3 class="gold">Ciência da Computação</h3>
-                <p class="edu-meta">Bacharelado | Previsão 2027</p>
-            </div>
-            <div class="edu-divider"></div>
-            <div class="edu-item">
-                <h3>Licenciatura em Biologia</h3>
-                <p class="edu-meta">Concluído | 2016</p>
-            </div>
-        </section>
-
-        <section class="card card-menu-projects">
-            <h2 class="label">Consultoria</h2>
-            <nav class="lista-clicavel">
-                <button class="project-btn active" onclick="showProject('analytics')">WN Analytics</button>
-                <button class="project-btn" onclick="showProject('nexus')">WN Nexus</button>
-                <button class="project-btn" onclick="showProject('bi')">Data & BI</button>
-                <button class="project-btn" onclick="showProject('infra')">Consultoria TI</button>
-            </nav>
-        </section>
-
-        <section class="card card-detalhes-tecnicos">
-            <h2 class="label">Visão Técnica</h2>
-            <div id="project-details">
-                <h3 class="gold">WN Analytics</h3>
-                <p class="project-desc">Inteligência de negócio e análise de processos para suporte estratégico à decisão corporativa.</p>
-                <div class="tech-stack-projeto">
-                    <div class="tags-mini">
-                        <span>Consultoria</span><span>KPIs</span><span>Métricas</span>
+    <main class="p-wrapper">
+        <div class="p-bento-grid">
+            
+            <section class="p-card p-profile">
+                <div class="p-photo">
+                    <img src="imagens/Washington Santos.png" alt="Washington Santos">
+                </div>
+                <h1>Washington Santos</h1>
+                <span class="p-gold-tag">Especialista em Dados & Software</span>
+                <p class="p-bio">
+                    Especialista em transformar dados brutos em inteligência estratégica através do desenvolvimento de aplicações robustas, scripts de análise preditiva e automações de alto impacto. Atuo na intersecção entre a Engenharia de Software e a Ciência de Dados para construir ecossistemas digitais escaláveis.
+                </p>
+                
+                <div class="p-profile-stats">
+                    <div class="p-stat-item">
+                        <span class="p-stat-value">+8 Anos</span>
+                        <span class="p-stat-label">Experiência</span>
+                    </div>
+                    <div class="p-stat-item">
+                        <span class="p-stat-value">WN Nexus</span>
+                        <span class="p-stat-label">ERP Core</span>
+                    </div>
+                    <div class="p-stat-item">
+                        <span class="p-stat-value">BI</span>
+                        <span class="p-stat-label">Analytics</span>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="card card-galeria">
-            <h2 class="label">Visualização</h2>
-            <div id="project-gallery" class="photo-grid">
-                <img src="Img/analytics-view.png" alt="Analytics" class="gallery-img">
-            </div>
-        </section>
+            <section class="p-card p-about">
+                <span class="p-label">Visão Geral</span>
+                <p>Desenvolvedor e Analista focado na otimização de processos corporativos. Utilizo Engenharia de Software para criar ferramentas personalizadas e scripts preditivos que fundamentam decisões críticas.</p>
+            </section>
 
-        <section class="card card-stack">
-            <h2 class="label">Habilidades Técnicas</h2>
-            <div class="tags-container">
-                <span>SQL</span><span>Python</span><span>JavaScript</span><span>ETL</span><span>Power BI</span>
-                <span>Dev Web</span><span>Gestão de Projetos</span><span>Infraestrutura</span>
-            </div>
-        </section>
+            <section class="p-card p-edu">
+                <span class="p-label">Formação</span>
+                <h3>Ciência da Computação</h3>
+                <p class="p-edu-meta">Bacharelado | 2023 - 2027</p>
+                <div style="height: 1px; background: var(--p-border); margin: 10px 0;"></div>
+                <p class="p-edu-meta">Bacharel em Biologia (2016)</p>
+            </section>
 
-        <section class="card card-redes-footer">
-            <div class="redes-content">
-                <a href="#">WhatsApp</a>
-                <a href="#">E-mail Profissional</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-            </div>
-        </section>
+            <section class="p-card p-menu">
+                <span class="p-label">Projetos</span>
+                <div class="p-btn-group">
+                    <button class="p-btn active" onclick="updateProject('analytics')">WN Analytics</button>
+                    <button class="p-btn" onclick="updateProject('nexus')">WN Nexus</button>
+                    <button class="p-btn" onclick="updateProject('bi')">Data & BI</button>
+                    <button class="p-btn" onclick="updateProject('infra')">Consultoria TI</button>
+                </div>
+            </section>
 
+            <section class="p-card p-stack">
+                <span class="p-label">Tech Stack</span>
+                <div class="p-tech-icons">
+                    <span>Python</span><span>SQL</span><span>Power BI</span>
+                    <span>ETL</span><span>Flet</span><span>Predictive Analytics</span>
+                </div>
+            </section>
+
+            <section class="p-card p-details" id="project-display">
+                <div class="p-details-content">
+                    <div class="p-text-side">
+                        <h2 class="p-gold-text" id="p-title">WN Analytics</h2>
+                        <p id="p-desc">Consultoria técnica especializada na otimização de infraestruturas de dados e criação de algoritmos para suporte estratégico.</p>
+                        <div class="p-tags" id="p-tags">
+                            <span>Estratégia</span><span>KPIs</span><span>Algoritmos</span>
+                        </div>
+                    </div>
+                    <div class="p-visual-side">
+                        <img id="p-image" src="imagens/analytics-preview.png" alt="Preview" class="p-img-fluid">
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-card p-connect">
+                <div class="p-connect-grid">
+                    <div class="p-connect-text">
+                        <span class="p-label-dark">Contato & Redes</span>
+                        <h3>Vamos construir sua infraestrutura de dados?</h3>
+                    </div>
+                    <div class="p-social-btns">
+                        <a href="https://wa.me/5581998286308" class="p-btn-social" target="_blank">WhatsApp</a>
+                        <a href="https://www.linkedin.com/in/washington-ti/" class="p-btn-social" target="_blank">LinkedIn</a>
+                        <a href="https://www.instagram.com/wnanalytics" class="p-btn-social" target="_blank">Instagram</a>
+                        <a href="https://github.com/SH1NNxs" class="p-btn-social" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </main>
 
     <script>
-        function showProject(name) {
-            const details = document.getElementById('project-details');
-            const gallery = document.getElementById('project-gallery');
-            document.querySelectorAll('.project-btn').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-
-            const data = {
-                analytics: { title: "WN Analytics", desc: "Inteligência de negócio e análise estratégica corporativa.", tags: ["Métricas", "Processos"], img: "Img/analytics-view.png" },
-                nexus: { title: "WN Nexus", desc: "Sistema empresarial focado em Engenharia de Software e Gestão.", tags: ["Python", "SQL", "Flet"], img: "Img/nexus-view.png" },
-                bi: { title: "Data & BI", desc: "Soluções de ETL e dashboards de alta performance.", tags: ["Power BI", "Python", "ETL"], img: "Img/bi-view.png" },
-                infra: { title: "Consultoria TI", desc: "Estruturação de infraestrutura e segurança da informação.", tags: ["Infra", "Segurança"], img: "Img/infra-view.png" }
+        function updateProject(id) {
+            const projects = {
+                analytics: { t: "WN Analytics", d: "Consultoria técnica especializada na otimização de infraestruturas de dados e criação de algoritmos para suporte estratégico à decisão empresarial.", g: ["Estratégia", "KPIs", "Algoritmos"], i: "imagens/analytics-preview.png" },
+                nexus: { t: "WN Nexus", d: "Ecossistema ERP desenvolvido com arquitetura escalável e foco em Engenharia de Software. Integra gestão de estoque, vendas e análise em tempo real.", g: ["Python", "Flet", "Engenharia"], i: "imagens/nexus-preview.png" },
+                bi: { t: "Data & BI", d: "Desenvolvimento de pipelines de ETL, scripts de análise preditiva em Python e dashboards que transformam volumes massivos de dados em previsões acionáveis.", g: ["Predictive", "ETL", "Power BI"], i: "imagens/bi-view.png" },
+                infra: { t: "Consultoria TI", d: "Governança tecnológica, segurança da informação e estruturação de infraestrutura robusta para continuidade do negócio.", g: ["Segurança", "Infra", "Redes"], i: "imagens/infra-view.png" }
             };
-
-            const p = data[name];
-            details.innerHTML = `<h3 class="gold">${p.title}</h3><p class="project-desc">${p.desc}</p>
-                <div class="tags-mini">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>`;
-            gallery.innerHTML = `<img src="${p.img}" alt="${p.title}" class="gallery-img">`;
+            const p = projects[id];
+            document.querySelectorAll('.p-btn').forEach(b => b.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            const display = document.getElementById('project-display');
+            display.style.opacity = 0;
+            setTimeout(() => {
+                document.getElementById('p-title').innerText = p.t;
+                document.getElementById('p-desc').innerText = p.d;
+                document.getElementById('p-image').src = p.i;
+                document.getElementById('p-tags').innerHTML = p.g.map(tag => `<span>${tag}</span>`).join('');
+                display.style.opacity = 1;
+            }, 200);
         }
     </script>
 </body>
