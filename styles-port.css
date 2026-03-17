@@ -13,7 +13,7 @@
 .p-page {
     background: radial-gradient(circle at top right, #1e293b, var(--p-bg)) !important;
     background-attachment: fixed !important;
-    color: var(--p-text); margin: 0; font-family: 'Inter', sans-serif; line-height: 1.5;
+    color: var(--p-text); margin: 0; font-family: 'Inter', sans-serif;
 }
 
 .p-header {
@@ -30,7 +30,7 @@
 
 .p-wrapper { max-width: 1200px; margin: 110px auto 40px; padding: 0 20px; }
 
-/* BENTO GRID AREAS */
+/* BENTO GRID */
 .p-bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -42,45 +42,83 @@
     gap: 1.25rem;
 }
 
-.p-card { background: var(--p-card); border: 1px solid var(--p-border); border-radius: var(--p-radius); padding: 1.8rem; transition: var(--p-transition); display: flex; flex-direction: column; }
+.p-card { background: var(--p-card); border: 1px solid var(--p-border); border-radius: var(--p-radius); padding: 1.8rem; transition: var(--p-transition); overflow: hidden; }
 .p-card:hover { border-color: rgba(250, 204, 21, 0.4); transform: translateY(-5px); }
 
-/* AREAS */
-.p-profile { grid-area: profile; align-items: center; text-align: center; min-height: fit-content; }
+/* ÁREAS */
+.p-profile { grid-area: profile; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .p-about { grid-area: about; }
 .p-edu { grid-area: edu; }
 .p-menu { grid-area: menu; }
 .p-stack { grid-area: stack; }
-.p-details { grid-area: details; min-height: 400px; opacity: 1; transition: opacity 0.3s ease; }
-.p-connect { grid-area: connect; background: linear-gradient(135deg, var(--p-gold) 0%, var(--p-gold-muted) 100%); color: #020617; padding: 2.5rem !important; }
+.p-details { grid-area: details; min-height: 450px; opacity: 1; transition: opacity 0.3s; }
+.p-connect { grid-area: connect; background: linear-gradient(135deg, var(--p-gold) 0%, var(--p-gold-muted) 100%); color: #020617; }
 
-/* PERFIL ITEMS */
-.p-photo { width: 120px; height: 120px; border-radius: 25px; border: 2px solid var(--p-gold); margin-bottom: 1rem; overflow: hidden; }
+/* PERFIL */
+.p-photo { width: 110px; height: 110px; border-radius: 25px; border: 2px solid var(--p-gold); margin-bottom: 1rem; overflow: hidden; }
 .p-photo img { width: 100%; height: 100%; object-fit: cover; }
-.p-profile h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.3rem; }
-.p-bio { font-size: 1rem; margin: 0.5rem 0 auto; color: var(--p-text); line-height: 1.6; }
-.p-profile-stats { display: flex; justify-content: space-between; width: 100%; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--p-border); }
-.p-stat-value { font-size: 1rem; font-weight: 850; color: var(--p-gold); display: block; }
-.p-stat-label { font-size: 0.65rem; text-transform: uppercase; color: var(--p-sub); }
+.p-profile h1 { font-size: 1.7rem; font-weight: 800; margin-bottom: 0.2rem; }
+.p-gold-tag { color: var(--p-gold); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
+.p-bio { font-size: 1rem; line-height: 1.6; margin-bottom: auto; padding: 0 10px; }
+.p-profile-stats { display: flex; justify-content: space-between; width: 100%; margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--p-border); }
+.p-stat-value { font-size: 0.9rem; font-weight: 800; color: var(--p-gold); display: block; }
+.p-stat-label { font-size: 0.6rem; text-transform: uppercase; color: var(--p-sub); }
 
-/* DETAILS SIDE */
-.p-details-content { display: flex; flex-direction: column; gap: 1.5rem; height: 100%; }
-.p-visual-side { border-radius: 14px; overflow: hidden; border: 1px solid var(--p-border); background: #000; flex: 1; min-height: 200px; }
-.p-img-fluid { width: 100%; height: 100%; object-fit: cover; }
+/* CARROSSEL DE IMAGENS */
+.p-visual-side {
+    position: relative;
+    max-width: 85%;
+    margin: 1.5rem auto 0;
+    background: #000;
+    border-radius: 15px;
+    border: 2px solid var(--p-border);
+    transition: var(--p-transition);
+}
 
-/* BTNS & LABELS */
-.p-gold-tag { color: var(--p-gold); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
-.p-label { color: var(--p-sub); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 1rem; font-weight: 800; }
-.p-gold-text { color: var(--p-gold); font-size: 1.6rem; margin-bottom: 0.8rem; }
-.p-btn { background: rgba(255,255,255,0.03); border: 1px solid var(--p-border); color: var(--p-text); padding: 12px; border-radius: 12px; cursor: pointer; text-align: left; font-weight: 700; margin-bottom: 0.6rem; transition: 0.3s; }
+.p-card:hover .p-visual-side { border-color: var(--p-gold); box-shadow: 0 0 20px rgba(250, 204, 21, 0.2); }
+
+.p-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    border-radius: 13px;
+    -ms-overflow-style: none; scrollbar-width: none;
+}
+.p-carousel::-webkit-scrollbar { display: none; }
+
+.p-img-fluid {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    scroll-snap-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.p-carousel-hint {
+    position: absolute; bottom: 5px; right: 10px;
+    font-size: 0.6rem; color: var(--p-gold); font-weight: 700;
+    text-transform: uppercase; pointer-events: none; opacity: 0.7;
+}
+
+/* BOTÕES E TAGS */
+.p-label { color: var(--p-sub); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.8rem; font-weight: 800; }
+.p-label-dark { color: rgba(0,0,0,0.5); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
+.p-gold-text { color: var(--p-gold); font-size: 1.5rem; }
+.p-divider { height: 1px; background: var(--p-border); margin: 8px 0; }
+
+.p-btn-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.p-btn { background: rgba(255,255,255,0.03); border: 1px solid var(--p-border); color: var(--p-text); padding: 12px; border-radius: 12px; cursor: pointer; text-align: left; font-weight: 700; transition: 0.3s; }
 .p-btn.active { border-color: var(--p-gold); color: var(--p-gold); background: rgba(250, 204, 21, 0.1); }
-.p-tech-icons span { font-size: 0.7rem; background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; margin: 0 5px 5px 0; display: inline-block; border: 1px solid var(--p-border); }
-.p-tags span { font-size: 0.7rem; background: #1e293b; padding: 5px 12px; border-radius: 6px; margin-right: 5px; border: 1px solid var(--p-border); }
 
-/* SOCIAL BUTTONS (MOBILE FIX) */
-.p-connect-grid { display: flex; justify-content: space-between; align-items: center; }
+.p-tech-icons span, .p-tags span { font-size: 0.7rem; background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; margin: 0 5px 5px 0; display: inline-block; border: 1px solid var(--p-border); }
+
+/* CONTATO */
+.p-connect-grid { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
 .p-social-btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-.p-btn-social { text-decoration: none; background: #020617; color: #fff !important; padding: 10px 18px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; transition: var(--p-transition); }
+.p-btn-social { text-decoration: none; background: #020617; color: #fff !important; padding: 12px 20px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
 .p-btn-social:hover { transform: translateY(-3px); background: #1e293b; }
 
 /* RESPONSIVIDADE */
@@ -89,13 +127,10 @@
 }
 
 @media (max-width: 768px) {
-    .p-wrapper { margin-top: 100px; padding: 0 15px; }
-    .p-bento-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+    .p-wrapper { margin-top: 100px; }
+    .p-bento-grid { display: flex; flex-direction: column; gap: 1rem; }
     .p-connect-grid { flex-direction: column; text-align: center; gap: 1.5rem; }
     .p-social-btns { justify-content: center; width: 100%; }
-    .p-btn-social { width: 45%; text-align: center; box-sizing: border-box; } /* Garante que os botões caibam em pares */
-}
-
-@media (max-width: 480px) {
-    .p-btn-social { width: 100%; } /* Em telas muito pequenas, empilha os botões */
+    .p-btn-social { width: 46%; text-align: center; } /* Mantém em pares no mobile */
+    .p-visual-side { max-width: 100%; }
 }

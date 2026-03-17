@@ -34,7 +34,7 @@
                 <h1>Washington Santos</h1>
                 <span class="p-gold-tag">Especialista em Dados & Software</span>
                 <p class="p-bio">
-                    Especialista em transformar dados brutos em inteligência estratégica através do desenvolvimento de aplicações robustas, scripts de análise preditiva e automações de alto impacto. Atuo na intersecção entre a Engenharia de Software e a Ciência de Dados.
+                    Especialista em TI focado na arquitetura de ecossistemas digitais que impulsionam a eficiência operacional. Combinando Engenharia de Software com Ciência de Dados, desenvolvo desde aplicações robustas em Python até scripts de análise preditiva para decisões críticas.
                 </p>
                 <div class="p-profile-stats">
                     <div class="p-stat-item">
@@ -54,19 +54,15 @@
 
             <section class="p-card p-about">
                 <span class="p-label">Visão Geral</span>
-                <p>Especialista em TI e Desenvolvedor focado na arquitetura de ecossistemas digitais que impulsionam a eficiência operacional. Combinando princípios sólidos de Engenharia de Software com Ciência de Dados, desenvolvo desde aplicações robustas em Python — como o ERP WN Nexus — até scripts complexos de análise preditiva. Meu trabalho consiste em transformar fluxos de dados massivos em ferramentas estratégicas personalizadas, eliminando gargalos e fornecendo uma base tecnológica segura para a tomada de decisões críticas em micro e pequenas empresas.</p>
+                <p>Otimizo processos corporativos através de ferramentas personalizadas e scripts preditivos. Foco total em transformar fluxos de dados em suporte estratégico para micro e pequenas empresas.</p>
             </section>
 
             <section class="p-card p-edu">
                 <span class="p-label">Formação</span>
                 <h3>Ciência da Computação</h3>
                 <p class="p-edu-meta">Bacharelado | 2023 - 2027</p>
-                <div style="height: 1px; background: var(--p-border); margin: 10px 0;"></div>
-                <br>
-                <span class="p-label">Formação</span>
-                <h3>Biologia</h3>
-                <p class="p-edu-meta">Licenciatura | 2013 - 2017</p>
-                <div style="height: 1px; background: var(--p-border); margin: 10px 0;"></div>
+                <div class="p-divider"></div>
+                <p class="p-edu-meta">Bacharel em Biologia (2016)</p>
             </section>
 
             <section class="p-card p-menu">
@@ -83,7 +79,7 @@
                 <span class="p-label">Tech Stack</span>
                 <div class="p-tech-icons">
                     <span>Python</span><span>SQL</span><span>Power BI</span>
-                    <span>ETL</span><span>Flet</span><span>Predictive Analytics</span>
+                    <span>ETL</span><span>Flet</span><span>Machine Learning</span>
                 </div>
             </section>
 
@@ -97,7 +93,10 @@
                         </div>
                     </div>
                     <div class="p-visual-side">
-                        <img id="p-image" src="imagens/analytics-preview.png" alt="Preview" class="p-img-fluid">
+                        <div class="p-carousel" id="p-carousel">
+                            <img src="imagens/logo_wn.jpg" class="p-img-fluid">
+                        </div>
+                        <div class="p-carousel-hint">Arraste para o lado ➔</div>
                     </div>
                 </div>
             </section>
@@ -106,7 +105,7 @@
                 <div class="p-connect-grid">
                     <div class="p-connect-text">
                         <span class="p-label-dark">Contato & Redes</span>
-                        <h3>Vamos construir sua infraestrutura de dados?</h3>
+                        <h3>Pronto para escalar sua infraestrutura?</h3>
                     </div>
                     <div class="p-social-btns">
                         <a href="https://wa.me/5581998286308" class="p-btn-social" target="_blank">WhatsApp</a>
@@ -122,23 +121,51 @@
     <script>
         function updateProject(id) {
             const projects = {
-                analytics: { t: "WN Analytics", d: "Otimização de infraestruturas de dados e algoritmos estratégicos.", g: ["Estratégia", "KPIs", "Algoritmos"], i: "imagens/analytics-preview.png" },
-                nexus: { t: "WN Nexus", d: "ERP escalável com foco em Engenharia de Software. Gestão e análise em tempo real.", g: ["Python", "Flet", "Engenharia"], i: "imagens/nexus-preview.png" },
-                bi: { t: "Data & BI", d: "ETL e scripts preditivos em Python para previsões acionáveis.", g: ["Predictive", "ETL", "Power BI"], i: "imagens/bi-view.png" },
-                infra: { t: "Consultoria TI", d: "Governança tecnológica e segurança da informação para empresas.", g: ["Segurança", "Infra", "Redes"], i: "imagens/infra-view.png" }
+                analytics: { 
+                    t: "WN Analytics", 
+                    d: "Otimização de infraestruturas de dados e algoritmos estratégicos.", 
+                    g: ["Estratégia", "KPIs", "Algoritmos"], 
+                    i: ["imagens/analytics-preview.png", "imagens/analytics-2.png"] 
+                },
+                nexus: { 
+                    t: "WN Nexus", 
+                    d: "ERP escalável com foco em Engenharia de Software. Gestão e análise em tempo real.", 
+                    g: ["Python", "Flet", "Engenharia"], 
+                    i: ["imagens/nexus-vendas.png", "imagens/nexus-estoque.png", "imagens/nexus-dash.png"] 
+                },
+                bi: { 
+                    t: "Data & BI", 
+                    d: "ETL e scripts preditivos em Python para previsões acionáveis.", 
+                    g: ["Predictive", "ETL", "Power BI"], 
+                    i: ["imagens/bi-view.png", "imagens/bi-view-2.png"] 
+                },
+                infra: { 
+                    t: "Consultoria TI", 
+                    d: "Governança tecnológica e segurança da informação corporativa.", 
+                    g: ["Segurança", "Infra", "Redes"], 
+                    i: ["imagens/infra-view.png"] 
+                }
             };
+
             const p = projects[id];
             document.querySelectorAll('.p-btn').forEach(b => b.classList.remove('active'));
             event.currentTarget.classList.add('active');
+
             const display = document.getElementById('project-display');
             display.style.opacity = 0;
+
             setTimeout(() => {
                 document.getElementById('p-title').innerText = p.t;
                 document.getElementById('p-desc').innerText = p.d;
-                document.getElementById('p-image').src = p.i;
                 document.getElementById('p-tags').innerHTML = p.g.map(tag => `<span>${tag}</span>`).join('');
+                
+                // Atualiza Carrossel
+                const carousel = document.getElementById('p-carousel');
+                carousel.innerHTML = p.i.map(src => `<img src="${src}" class="p-img-fluid">`).join('');
+                carousel.scrollLeft = 0; // Reseta o scroll para a primeira foto
+                
                 display.style.opacity = 1;
-            }, 200);
+            }, 250);
         }
     </script>
 </body>
