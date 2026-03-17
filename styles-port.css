@@ -24,13 +24,13 @@
 
 .p-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
 .p-logo img { height: 40px; }
-.p-nav ul { list-style: none; display: flex; gap: 2rem; }
+.p-nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
 .p-nav a { text-decoration: none; color: var(--p-sub); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
 .p-nav a.p-active { color: var(--p-gold); }
 
 .p-wrapper { max-width: 1200px; margin: 110px auto 40px; padding: 0 20px; }
 
-/* GRID ÁREAS - MAPEAMENTO FINAL */
+/* BENTO GRID AREAS */
 .p-bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -45,45 +45,57 @@
 .p-card { background: var(--p-card); border: 1px solid var(--p-border); border-radius: var(--p-radius); padding: 1.8rem; transition: var(--p-transition); display: flex; flex-direction: column; }
 .p-card:hover { border-color: rgba(250, 204, 21, 0.4); transform: translateY(-5px); }
 
-.p-profile { grid-area: profile; align-items: center; text-align: center; justify-content: flex-start; min-height: 550px; }
+/* AREAS */
+.p-profile { grid-area: profile; align-items: center; text-align: center; min-height: fit-content; }
 .p-about { grid-area: about; }
 .p-edu { grid-area: edu; }
 .p-menu { grid-area: menu; }
 .p-stack { grid-area: stack; }
-.p-details { grid-area: details; min-height: 400px; }
+.p-details { grid-area: details; min-height: 400px; opacity: 1; transition: opacity 0.3s ease; }
 .p-connect { grid-area: connect; background: linear-gradient(135deg, var(--p-gold) 0%, var(--p-gold-muted) 100%); color: #020617; padding: 2.5rem !important; }
 
-/* ESTILIZAÇÃO INTERNA PERFIL */
+/* PERFIL ITEMS */
 .p-photo { width: 120px; height: 120px; border-radius: 25px; border: 2px solid var(--p-gold); margin-bottom: 1rem; overflow: hidden; }
 .p-photo img { width: 100%; height: 100%; object-fit: cover; }
 .p-profile h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.3rem; }
-.p-bio { font-size: 1.05rem; margin: 0.5rem 0 auto; }
+.p-bio { font-size: 1rem; margin: 0.5rem 0 auto; color: var(--p-text); line-height: 1.6; }
 .p-profile-stats { display: flex; justify-content: space-between; width: 100%; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--p-border); }
 .p-stat-value { font-size: 1rem; font-weight: 850; color: var(--p-gold); display: block; }
 .p-stat-label { font-size: 0.65rem; text-transform: uppercase; color: var(--p-sub); }
 
-/* DETALHES DINÂMICOS */
+/* DETAILS SIDE */
 .p-details-content { display: flex; flex-direction: column; gap: 1.5rem; height: 100%; }
-.p-visual-side { border-radius: 14px; overflow: hidden; border: 1px solid var(--p-border); background: #000; flex: 1; }
-.p-img-fluid { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+.p-visual-side { border-radius: 14px; overflow: hidden; border: 1px solid var(--p-border); background: #000; flex: 1; min-height: 200px; }
+.p-img-fluid { width: 100%; height: 100%; object-fit: cover; }
 
-/* BOTÕES E LABELS */
+/* BTNS & LABELS */
 .p-gold-tag { color: var(--p-gold); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
-.p-label { color: var(--p-sub); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 1rem; }
-.p-btn { background: rgba(255,255,255,0.03); border: 1px solid var(--p-border); color: var(--p-text); padding: 12px; border-radius: 12px; cursor: pointer; text-align: left; font-weight: 700; margin-bottom: 0.6rem; }
+.p-label { color: var(--p-sub); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 1rem; font-weight: 800; }
+.p-gold-text { color: var(--p-gold); font-size: 1.6rem; margin-bottom: 0.8rem; }
+.p-btn { background: rgba(255,255,255,0.03); border: 1px solid var(--p-border); color: var(--p-text); padding: 12px; border-radius: 12px; cursor: pointer; text-align: left; font-weight: 700; margin-bottom: 0.6rem; transition: 0.3s; }
 .p-btn.active { border-color: var(--p-gold); color: var(--p-gold); background: rgba(250, 204, 21, 0.1); }
-.p-tech-icons span { font-size: 0.7rem; background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; margin: 0 5px 5px 0; display: inline-block; }
+.p-tech-icons span { font-size: 0.7rem; background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; margin: 0 5px 5px 0; display: inline-block; border: 1px solid var(--p-border); }
+.p-tags span { font-size: 0.7rem; background: #1e293b; padding: 5px 12px; border-radius: 6px; margin-right: 5px; border: 1px solid var(--p-border); }
 
-/* CONTATO */
+/* SOCIAL BUTTONS (MOBILE FIX) */
 .p-connect-grid { display: flex; justify-content: space-between; align-items: center; }
-.p-btn-social { text-decoration: none; background: #020617; color: #fff !important; padding: 12px 20px; border-radius: 14px; font-weight: 700; font-size: 0.85rem; transition: var(--p-transition); margin-left: 0.5rem; }
+.p-social-btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.p-btn-social { text-decoration: none; background: #020617; color: #fff !important; padding: 10px 18px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; transition: var(--p-transition); }
 .p-btn-social:hover { transform: translateY(-3px); background: #1e293b; }
 
 /* RESPONSIVIDADE */
 @media (max-width: 1024px) {
     .p-bento-grid { grid-template-areas: "profile about about edu" "menu details details details" "stack details details details" "connect connect connect connect"; }
 }
+
 @media (max-width: 768px) {
-    .p-bento-grid { display: flex; flex-direction: column; }
+    .p-wrapper { margin-top: 100px; padding: 0 15px; }
+    .p-bento-grid { display: flex; flex-direction: column; gap: 1.5rem; }
     .p-connect-grid { flex-direction: column; text-align: center; gap: 1.5rem; }
+    .p-social-btns { justify-content: center; width: 100%; }
+    .p-btn-social { width: 45%; text-align: center; box-sizing: border-box; } /* Garante que os botões caibam em pares */
+}
+
+@media (max-width: 480px) {
+    .p-btn-social { width: 100%; } /* Em telas muito pequenas, empilha os botões */
 }
