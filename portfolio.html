@@ -1,172 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio | Washington Santos</title>
-    <link rel="stylesheet" href="styles-port.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
-<body class="p-page">
-
+    <link rel="stylesheet" href="styles-port.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-page">
     <header class="p-header">
-        <div class="p-container">
-            <div class="p-logo">
-                <a href="index.html"><img src="imagens/logo fundo transparente.png" alt="WN Analytics"></a>
-            </div>
-            <nav class="p-nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="portfolio.html" class="p-active">Portfólio</a></li>
-                    <li><a href="index.html#contato">Contato</a></li>
-                </ul>
-            </nav>
+      <div class="p-container">
+        <div class="p-logo">
+          <a href="index.html"
+            ><img src="imagens/logo fundo transparente.png" alt="WN Analytics"
+          /></a>
         </div>
+        <nav class="p-nav">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="portfolio.html" class="p-active">Portfólio</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="p-wrapper">
-        <div class="p-bento-grid">
-            
-            <section class="p-card p-profile">
-                <div class="p-photo">
-                    <img src="imagens/Washington Santos.png" alt="Washington Santos">
-                </div>
-                <h1>Washington Santos</h1>
-                <span class="p-gold-tag">Especialista em Dados & Software</span>
-                <p class="p-bio">
-                    Especialista em TI focado na arquitetura de ecossistemas digitais que impulsionam a eficiência operacional. Combinando Engenharia de Software com Ciência de Dados, desenvolvo desde aplicações robustas em Python até scripts de análise preditiva para decisões críticas.
-                </p>
-                <div class="p-profile-stats">
-                    <div class="p-stat-item">
-                        <span class="p-stat-value">+8 Anos</span>
-                        <span class="p-stat-label">Experiência</span>
-                    </div>
-                    <div class="p-stat-item">
-                        <span class="p-stat-value">WN Nexus</span>
-                        <span class="p-stat-label">ERP Core</span>
-                    </div>
-                    <div class="p-stat-item">
-                        <span class="p-stat-value">BI</span>
-                        <span class="p-stat-label">Analytics</span>
-                    </div>
-                </div>
-            </section>
+      <div class="p-bento-grid">
+        <section class="p-card p-profile">
+          <div class="p-photo">
+            <img src="imagens/Washington Santos.png" alt="Washington Santos" />
+          </div>
+          <h1>Washington Santos</h1>
+          <span class="p-gold-tag">Especialista em Dados & Software</span>
+          <p class="p-bio">
+            Especialista em TI focado na arquitetura de ecossistemas digitais
+            que impulsionam a eficiência operacional. Combinando Engenharia de
+            Software com Ciência de Dados, desenvolvo desde aplicações robustas
+            em Python até scripts de análise preditiva para decisões críticas.
+          </p>
+          <div class="p-profile-stats">
+            <div class="p-stat-item">
+              <span class="p-stat-value">+8 Anos</span>
+              <span class="p-stat-label">Experiência</span>
+            </div>
+            <div class="p-stat-item">
+              <span class="p-stat-value">WN Nexus</span>
+              <span class="p-stat-label">ERP Core</span>
+            </div>
+            <div class="p-stat-item">
+              <span class="p-stat-value">BI</span>
+              <span class="p-stat-label">Analytics</span>
+            </div>
+          </div>
+        </section>
 
-            <section class="p-card p-about">
-                <span class="p-label">Visão Geral</span>
-                <p>Otimizo processos corporativos através de ferramentas personalizadas e scripts preditivos. Foco total em transformar fluxos de dados em suporte estratégico para micro e pequenas empresas.</p>
-            </section>
+        <section class="p-card p-about">
+          <span class="p-label">Visão Geral</span>
+          <p>
+            Otimizo processos corporativos através de ferramentas personalizadas
+            e scripts preditivos. Foco total em transformar fluxos de dados em
+            suporte estratégico para micro e pequenas empresas.
+          </p>
+        </section>
 
-            <section class="p-card p-edu">
-                <span class="p-label">Formação</span>
-                <h3>Ciência da Computação</h3>
-                <p class="p-edu-meta">Bacharelado | 2023 - 2027</p>
-                <div class="p-divider"></div>
-                <p class="p-edu-meta">Bacharel em Biologia (2016)</p>
-            </section>
+        <section class="p-card p-edu">
+          <span class="p-label">Formação</span>
+          <h3>Ciência da Computação</h3>
+          <p class="p-edu-meta">Bacharelado | 2023 - 2027</p>
+          <div class="p-divider"></div>
+          <p class="p-edu-meta">Bacharel em Biologia (2016)</p>
+        </section>
 
-            <section class="p-card p-menu">
-                <span class="p-label">Projetos</span>
-                <div class="p-btn-group">
-                    <button class="p-btn active" onclick="updateProject('analytics')">WN Analytics</button>
-                    <button class="p-btn" onclick="updateProject('nexus')">WN Nexus</button>
-                    <button class="p-btn" onclick="updateProject('bi')">Data & BI</button>
-                    <button class="p-btn" onclick="updateProject('infra')">Consultoria TI</button>
-                </div>
-            </section>
+        <section class="p-card p-menu">
+          <span class="p-label">Projetos</span>
+          <div class="p-btn-group">
+            <button class="p-btn active" onclick="updateProject('analytics')">
+              WN Analytics
+            </button>
+            <button class="p-btn" onclick="updateProject('nexus')">
+              WN Nexus
+            </button>
+            <button class="p-btn" onclick="updateProject('bi')">
+              Data & BI
+            </button>
+            <button class="p-btn" onclick="updateProject('infra')">
+              Consultoria TI
+            </button>
+          </div>
+        </section>
 
-            <section class="p-card p-stack">
-                <span class="p-label">Tech Stack</span>
-                <div class="p-tech-icons">
-                    <span>Python</span><span>SQL</span><span>Power BI</span>
-                    <span>ETL</span><span>Flet</span><span>Machine Learning</span>
-                </div>
-            </section>
+        <section class="p-card p-stack">
+          <span class="p-label">Tech Stack</span>
+          <div class="p-tech-icons">
+            <span>Python</span><span>SQL</span><span>Power BI</span>
+            <span>ETL</span><span>Flet</span><span>Machine Learning</span>
+          </div>
+        </section>
 
-            <section class="p-card p-details" id="project-display">
-                <div class="p-details-content">
-                    <div class="p-text-side">
-                        <h2 class="p-gold-text" id="p-title">WN Analytics</h2>
-                        <p id="p-desc">Consultoria estratégica na otimização de infraestruturas de dados e algoritmos para suporte estratégico.</p>
-                        <div class="p-tags" id="p-tags">
-                            <span>Estratégia</span><span>KPIs</span><span>Algoritmos</span>
-                        </div>
-                    </div>
-                    <div class="p-visual-side">
-                        <div class="p-carousel" id="p-carousel">
-                            <img src="imagens/logo_wn.jpg" class="p-img-fluid">
-                        </div>
-                        <div class="p-carousel-hint">Arraste para o lado ➔</div>
-                    </div>
-                </div>
-            </section>
+        <section class="p-card p-details" id="project-display">
+          <div class="p-details-content">
+            <div class="p-text-side">
+              <h2 class="p-gold-text" id="p-title">WN Analytics</h2>
+              <p id="p-desc">
+                Consultoria estratégica na otimização de infraestruturas de
+                dados e algoritmos para suporte estratégico.
+              </p>
+              <div class="p-tags" id="p-tags">
+                <span>Estratégia</span><span>KPIs</span><span>Algoritmos</span>
+              </div>
+            </div>
+            <div class="p-visual-side">
+              <div class="p-carousel" id="p-carousel">
+                <img src="imagens/logo_wn.jpg" class="p-img-fluid" />
+              </div>
+              <div class="p-carousel-hint">Arraste para o lado ➔</div>
+            </div>
+          </div>
+        </section>
 
-            <section class="p-card p-connect">
-                <div class="p-connect-grid">
-                    <div class="p-connect-text">
-                        <span class="p-label-dark">Contato & Redes</span>
-                        <h3>Pronto para escalar sua infraestrutura?</h3>
-                    </div>
-                    <div class="p-social-btns">
-                        <a href="https://wa.me/5581998286308" class="p-btn-social" target="_blank">WhatsApp</a>
-                        <a href="https://www.linkedin.com/in/washington-ti/" class="p-btn-social" target="_blank">LinkedIn</a>
-                        <a href="https://www.instagram.com/wnanalytics" class="p-btn-social" target="_blank">Instagram</a>
-                        <a href="https://github.com/SH1NNxs" class="p-btn-social" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <section class="p-card p-connect">
+          <div class="p-connect-grid">
+            <div class="p-connect-text">
+              <span class="p-label-dark">Contato & Redes</span>
+              <h3>Pronto para escalar sua infraestrutura?</h3>
+            </div>
+            <div class="p-social-btns">
+              <a
+                href="https://wa.me/5581998286308"
+                class="p-btn-social"
+                target="_blank"
+                >WhatsApp</a
+              >
+              <a
+                href="https://www.linkedin.com/in/washington-ti/"
+                class="p-btn-social"
+                target="_blank"
+                >LinkedIn</a
+              >
+              <a
+                href="https://www.instagram.com/wnanalytics"
+                class="p-btn-social"
+                target="_blank"
+                >Instagram</a
+              >
+              <a
+                href="https://github.com/SH1NNxs"
+                class="p-btn-social"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script>
-        function updateProject(id) {
-            const projects = {
-                analytics: { 
-                    t: "WN Analytics", 
-                    d: "Otimização de infraestruturas de dados e algoritmos estratégicos.", 
-                    g: ["Estratégia", "KPIs", "Algoritmos"], 
-                    i: ["imagens/analytics-preview.png", "imagens/analytics-2.png"] 
-                },
-                nexus: { 
-                    t: "WN Nexus", 
-                    d: "ERP escalável com foco em Engenharia de Software. Gestão e análise em tempo real.", 
-                    g: ["Python", "Flet", "Engenharia"], 
-                    i: ["imagens/nexus-vendas.png", "imagens/nexus-estoque.png", "imagens/nexus-dash.png"] 
-                },
-                bi: { 
-                    t: "Data & BI", 
-                    d: "ETL e scripts preditivos em Python para previsões acionáveis.", 
-                    g: ["Predictive", "ETL", "Power BI"], 
-                    i: ["imagens/bi-view.png", "imagens/bi-view-2.png"] 
-                },
-                infra: { 
-                    t: "Consultoria TI", 
-                    d: "Governança tecnológica e segurança da informação corporativa.", 
-                    g: ["Segurança", "Infra", "Redes"], 
-                    i: ["imagens/infra-view.png"] 
-                }
-            };
+      function updateProject(id) {
+        const projects = {
+          analytics: {
+            t: "WN Analytics",
+            d: "Otimização de infraestruturas de dados e algoritmos estratégicos.",
+            g: ["Estratégia", "KPIs", "Algoritmos"],
+            i: ["imagens/analytics-preview.png", "imagens/analytics-2.png"],
+          },
+          nexus: {
+            t: "WN Nexus",
+            d: "ERP escalável com foco em Engenharia de Software. Gestão e análise em tempo real.",
+            g: ["Python", "Flet", "Engenharia"],
+            i: [
+              "imagens/nexus-vendas.png",
+              "imagens/nexus-estoque.png",
+              "imagens/nexus-dash.png",
+            ],
+          },
+          bi: {
+            t: "Data & BI",
+            d: "ETL e scripts preditivos em Python para previsões acionáveis.",
+            g: ["Predictive", "ETL", "Power BI"],
+            i: ["imagens/bi-view.png", "imagens/bi-view-2.png"],
+          },
+          infra: {
+            t: "Consultoria TI",
+            d: "Governança tecnológica e segurança da informação corporativa.",
+            g: ["Segurança", "Infra", "Redes"],
+            i: ["imagens/infra-view.png"],
+          },
+        };
 
-            const p = projects[id];
-            document.querySelectorAll('.p-btn').forEach(b => b.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+        const p = projects[id];
+        document
+          .querySelectorAll(".p-btn")
+          .forEach((b) => b.classList.remove("active"));
+        event.currentTarget.classList.add("active");
 
-            const display = document.getElementById('project-display');
-            display.style.opacity = 0;
+        const display = document.getElementById("project-display");
+        display.style.opacity = 0;
 
-            setTimeout(() => {
-                document.getElementById('p-title').innerText = p.t;
-                document.getElementById('p-desc').innerText = p.d;
-                document.getElementById('p-tags').innerHTML = p.g.map(tag => `<span>${tag}</span>`).join('');
-                
-                // Atualiza Carrossel
-                const carousel = document.getElementById('p-carousel');
-                carousel.innerHTML = p.i.map(src => `<img src="${src}" class="p-img-fluid">`).join('');
-                carousel.scrollLeft = 0; // Reseta o scroll para a primeira foto
-                
-                display.style.opacity = 1;
-            }, 250);
-        }
+        setTimeout(() => {
+          document.getElementById("p-title").innerText = p.t;
+          document.getElementById("p-desc").innerText = p.d;
+          document.getElementById("p-tags").innerHTML = p.g
+            .map((tag) => `<span>${tag}</span>`)
+            .join("");
+
+          // Atualiza Carrossel
+          const carousel = document.getElementById("p-carousel");
+          carousel.innerHTML = p.i
+            .map((src) => `<img src="${src}" class="p-img-fluid">`)
+            .join("");
+          carousel.scrollLeft = 0; // Reseta o scroll para a primeira foto
+
+          display.style.opacity = 1;
+        }, 250);
+      }
     </script>
-</body>
+  </body>
 </html>
